@@ -1,0 +1,11 @@
+div {
+  color: #ccc;
+}
+
+div span {
+  color: #bbb;
+}
+
+div input {
+  display: block;
+}

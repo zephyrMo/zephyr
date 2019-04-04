@@ -1,0 +1,47 @@
+#header_nav{
+    background: #f5f5f5;
+    min-width: 1200px;
+}
+#header_nav ul{
+    margin:0;
+}
+.login_reg li{
+    float: left;
+    line-height: 30px;
+    height:30px;
+    padding:0 6px;
+}
+.login_reg li:nth-child(2){
+    padding-right:20px;
+}
+.login_reg li:nth-child(3) .icon-mobile-phone{
+    font-size:22px;
+    color:#2db4ea;
+    vertical-align: middle;
+}
+#login{
+    line-height: 12px;
+    display: inline-block;
+    padding-right:6px;
+    border-right:2px solid #ccc;
+}
+.currentNav>li{
+    float: left;
+    line-height: 30px;
+    padding:0 16px;
+}
+.currentNav>li:first-child{
+    position: relative;
+    width: 65px;
+    padding:0;
+}
+.currentNav>li:first-child:hover .currentInfor{
+    display: block;
+}
+.currentInfor{
+    display: none;
+    width: 65px;
+    position: absolute;
+    left:0;
+    top:30px;
+}

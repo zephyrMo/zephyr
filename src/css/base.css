@@ -1,0 +1,47 @@
+*{box-sizing: border-box;}
+html,header, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,input{ margin:0; padding:0; }
+fieldset, img,input,button { border:0 none; outline-style:none; }
+ul,li,ol{ list-style:none; }
+select, input { vertical-align:middle;}
+textarea { resize:none; } 
+img {vertical-align:middle; } 
+table { border-collapse:collapse; }
+a {text-decoration:none; }
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:1em;}
+s,i,em{font-style:normal;text-decoration:none;}
+b{font-weight:normal;}
+body {
+	
+    font:12px "宋体";
+    color:#666;
+    font-weight: normal;
+}
+
+.clearfix::after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	overflow:hidden;
+	visibility:hidden;
+	*zoom:1
+}
+.container {
+    width: 1200px;
+    height: 100%;
+    margin:0 auto;
+    /*background-color: pink;*/
+}
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.ac {
+    text-align:center;
+}
+
+.f12{ font-size: 12px;}
+.f14{ font-size: 14px;}
+.f16{ font-size: 16px;}
