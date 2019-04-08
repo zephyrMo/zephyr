@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="../lib/Font-Awesome-3.2.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/shouye.css">
+<script src="../lib/jQuery/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+<script src="../js/zephyrCarousel.js"></script>
+
+<body>
+    <header>
+        <!-- 登录信息 -->
+        <div id="header_nav">
+            <div class="container">
+                <ul class="login_reg fl clearfix">
+                    <li>
+                        <span id="login">登录</span>
+                    </li>
+                    <li>
+                        <span id="registet">免费注册</span>
+                    </li>
+                    <li>
+                        <span class="iconfont icon-mobile-phone"></span>
+                        <span>下载博库APP</span>
+                    </li>
+                </ul>
+                <ul class="currentNav fr clearfix">
+                    <li>
+                        <span>
+                            <span>我的博库</span>
+                            <i class="iconfont icon-angle-down"></i>
+                        </span>
+                        <ul class="currentInfor">
+                            <li>我的订单</li>
+                            <li>我的优惠券</li>
+                            <li>我的收藏</li>
+                            <li>我的收入</li>
+                            <li>官方消息</li>
+                        </ul>
+                        <span class="bd_r">|</span>
+                    </li>
+                    <li>
+                        <span>收藏夹</span>
+                        <span class="bd_r">|</span>
+                    </li>
+                    <li>
+                        <span>店铺管理</span>
+                        <span class="bd_r">|</span>
+                    </li>
+                    <li>
+                        <span>联系客服</span>
+                        <span class="bd_r">|</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+    <!-- logo+搜索+购物车 -->
+    <div id="search">
+        <div class="logo container">
+            <h1>博库网</h1>
+            <div class="search-box">
+                <div class="search-container">
+                    <input type="text" placeholder="余华">
+                </div>
+                <i class="toSearch iconfont icon-search"></i>
+                <p class="tip">
+                    <a target="_blank" href="#" title="茅台酒收藏">茅台酒收藏</a>
+                    <span>|</span> 
+                    <a target="_blank" class="cl-9" href="#" title="夏摩山谷">夏摩山谷</a>
+                    <span>|</span> 
+                    <a target="_blank" class="cl-9" href="#" title="崔永元 有话说">崔永元 有话说</a>
+                    <span>|</span> 
+                    <a target="_blank" class="cl-9" href="#" title="林清玄">林清玄</a>
+                    <span>|</span> 
+                    <a target="_blank" class="cl-9" href="#" title="邓小平大决策">邓小平大决策</a>
+                </p>
+            </div>
+            <div class="shop-cart">
+                <a href="#">
+                    <i class="iconfont icon-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+        </div>
+        <!-- 分类 -->
+        <div class="nav-box container clearfix">
+            <div class="type fl">
+                <a href="#">
+                    <span class="iconfont icon-reorder"></span>
+                    所有商品分类
+                </a>
+            </div>
+            <div class="nav fl">
+                <!--固定导航菜单-->
+                <a class="fl" href="#"><span>首页</span></a>
+                <a class="fl" href="#"><span>新品</span></a>
+                <a class="fl" href="#"><span>限时购</span></a>
+                <a class="fl" href="#"><span>排行榜</span></a>
+                <!--自定义导航菜单-->
+                <span class="fl">|</span>
+                <a class="fl" href="#">
+                    <span>图书馆</span>
+                </a>
+                <a class="fl" href="#">
+                    <span>文创馆</span>
+                </a>
+                <a class="fl" href="#">
+                    <span>生活美学馆</span>
+                </a>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </div>
+    <!-- 轮播图区域 -->
+    <div class="section">
+        <!-- banner、菜单、公告 -->
+        <div class="menu fl">
+            <div class="title">
+                <i class="iconfont" style="background-position:top left"></i>
+                <a href="#">标题1</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -50px"></i>
+                <a href="#">标题2</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -100px"></i>
+                <a href="#">标题3</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -150px"></i>
+                <a href="#">标题4</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -200px"></i>
+                <a href="#">标题5</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -250px"></i>
+                <a href="#">标题6</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -300px"></i>
+                <a href="#">标题7</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -350px"></i>
+                <a href="#">标题8</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -400px"></i>
+                <a href="#">标题9</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>   
+        </div>
+        <!-- 轮播图 -->
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background:red;">Slide 1</div>
+                    <div class="swiper-slide" style="background:blue;">Slide 2</div>
+                    <div class="swiper-slide" style="background:green;">Slide 3</div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- 公告 -->
+        <div class="notice">
+            <div class="title clearfix">
+                <ul>
+                    <li class="circle">
+                        <img src="https://bnmpstyle.bookuu.com/wap/images/default_shop.png" alt="">
+                    </li>
+                    <li>博库体验店</li>
+                </ul>
+                <div class="shareShop">
+                    <div>分享店铺:</div>
+                    <div class="fl" data-tag="share_1">
+                        <a class="bds_tsina" data-cmd="tsina"
+                            style="background-image: url(https://bnmpstyle.bookuu.com/www/images/sina.png);background-position: center center;padding-left: 0;margin: 10px 10px 0 2px;"
+                            title="分享到新浪微博"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin"
+                            style="background-image: url(https://bnmpstyle.bookuu.com/www/images/weixin.png);background-position: center center;padding-left: 0;margin: 10px 10px 0 2px;"
+                            title="分享到微信"></a>
+                        <a class="bds_qzone" data-cmd="qzone" href="#"
+                            style="background-image: url(https://bnmpstyle.bookuu.com/www/images/qq.png);background-position: center center;padding-left: 0;margin: 10px 0 0 2px;"
+                            title="分享到QQ空间"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="loginArea">
+                <a href="#">一键开店</a>
+            </div>
+            <div class="server-notice"></div>
+        </div>
+    </div>
+    <!-- 右侧导航 -->
+    <div class="rightmenu-box">
+        <div class="rightmenu">
+            <a href="#" title="联系客服">
+                <span class="iconfont icon-comments"></span>
+                <p>联<br>系<br>客<br>服</p>
+            </a>
+            <a href="#" title="购物车">
+                <span class="iconfont icon-shopping-cart"></span>
+                <p>购<br>物<br>车</p>
+            </a>
+            <a href="#" title="签到">
+                <span class="iconfont icon-edit"></span>
+                <p>签<br>到</p>
+            </a>
+            <a href="#" title="下载APP">
+                <span class="iconfont icon-mobile-phone"></span>
+                <p>下<br>载<br>APP</p>
+            </a>
+        </div>
+        <div class="action-totop">
+            <span class="iconfont icon-caret-up"></span>
+            <p>TOP</p>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

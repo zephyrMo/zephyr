@@ -1,47 +1,90 @@
-#header_nav{
-    background: #f5f5f5;
-    min-width: 1200px;
+#header_nav {
+  background: #f5f5f6;
+  min-width: 1200px;
 }
-#header_nav ul{
-    margin:0;
+
+#header_nav ul {
+  margin: 0;
 }
-.login_reg li{
-    float: left;
-    line-height: 30px;
-    height:30px;
-    padding:0 6px;
+
+.login_reg li {
+  float: left;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 6px;
 }
-.login_reg li:nth-child(2){
-    padding-right:20px;
+
+.login_reg li:nth-child(2) {
+  padding-right: 20px;
 }
-.login_reg li:nth-child(3) .icon-mobile-phone{
-    font-size:22px;
-    color:#2db4ea;
-    vertical-align: middle;
+
+.login_reg li:nth-child(3) .icon-mobile-phone {
+  font-size: 22px;
+  color: #2db4ea;
+  vertical-align: middle;
 }
-#login{
-    line-height: 12px;
-    display: inline-block;
-    padding-right:6px;
-    border-right:2px solid #ccc;
+
+#login {
+  line-height: 12px;
+  display: inline-block;
+  padding-right: 6px;
+  border-right: 2px solid #eee;
 }
-.currentNav>li{
-    float: left;
-    line-height: 30px;
-    padding:0 16px;
+
+.currentNav li {
+  float: left;
+  padding: 0 16px;
+  position: relative;
 }
-.currentNav>li:first-child{
-    position: relative;
-    width: 65px;
-    padding:0;
+
+.currentNav li > span {
+  line-height: 30px;
 }
-.currentNav>li:first-child:hover .currentInfor{
-    display: block;
+
+.currentNav li .bd_r {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-.currentInfor{
-    display: none;
-    width: 65px;
-    position: absolute;
-    left:0;
-    top:30px;
+
+.currentNav > li:first-child:hover {
+  position: relative;
+  border: 1px solid #eee;
+  border-bottom: 0 none;
+  margin-top: -1px;
+  background: #fff;
+}
+
+.currentNav > li:first-child:hover .currentInfor {
+  display: block;
+}
+
+.currentNav li:first-child:hover > span {
+  margin-right: -1px;
+  margin-left: -1px;
+  padding-left: 2px;
+  padding-right: 12px;
+}
+
+.currentNav li:first-child:hover > span.bd_r {
+  display: none;
+}
+
+.currentNav li:first-child:hover > span i {
+  display: none;
+}
+
+.currentInfor {
+  display: none;
+  width: 94px;
+  line-height: 30px;
+  border: 1px solid #eee;
+  border-top: 0 none;
+  position: absolute;
+  left: -1px;
+  top: 30px;
+}
+
+.currentInfor li:hover {
+  color: #2db4ea;
 }

@@ -30,6 +30,7 @@ body {
     width: 1200px;
     height: 100%;
     margin:0 auto;
+    padding: 0;
     /*background-color: pink;*/
 }
 .fl {
