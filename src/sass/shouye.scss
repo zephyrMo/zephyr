@@ -1,8 +1,9 @@
 $borderColor:#eee;
 $mainColor:#2db4ea;
-a{
-    text-decoration: none;
-}
+@import '../lib/bootstrap/css/bootstrap.css';
+@import '../lib/Font-Awesome-3.2.1/css/font-awesome.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css';
+@import '../css/base.css';
 body{
     color:#212121;
     font-size: 14px;
