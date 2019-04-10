@@ -3,11 +3,6 @@
 @import url(../lib/Font-Awesome-3.2.1/css/font-awesome.min.css);
 @import 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css';
 @import url(../css/base.css);
-body {
-  color: #212121;
-  font-size: 14px;
-}
-
 #header_nav {
   background: #f5f5f6;
   min-width: 1200px;
@@ -103,6 +98,128 @@ body {
 .currentInfor li:hover {
   cursor: pointer;
   color: #2db4ea;
+}
+
+footer {
+  border-top: 1px #e1e1e1 solid;
+  background-color: #fff;
+}
+
+footer .tag {
+  padding: 20px;
+  height: 100px;
+  border-bottom: 1px #e1e1e1 solid;
+}
+
+footer .tag ul {
+  padding: 0 50px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+footer .tag ul li {
+  line-height: 25px;
+  padding: 5px 0;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+}
+
+footer .tag ul li img {
+  float: left;
+  margin-right: 10px;
+}
+
+footer .tag ul li p:first-child {
+  font-size: 24px;
+}
+
+footer .links {
+  position: relative;
+  padding: 20px 0;
+  width: 1200px;
+}
+
+footer .links .links-box {
+  position: relative;
+  width: 850px;
+}
+
+footer .links .links-box li {
+  float: left;
+  line-height: 30px;
+  width: 20%;
+}
+
+footer .links .links-box li span {
+  line-height: 40px;
+  font-size: 16px;
+  display: block;
+}
+
+footer .links .links-box li a {
+  color: #666;
+}
+
+footer .links .links-box li a:hover {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+footer .links i {
+  display: block;
+  position: absolute;
+  right: 28%;
+  top: 15%;
+  width: 1px;
+  height: 70%;
+  background-color: #e1e1e1;
+}
+
+footer .links .code-box {
+  width: 350px;
+  padding: 0 34px 0 56px;
+}
+
+footer .links .code-box ul li {
+  line-height: 30px;
+  text-align: center;
+  color: #666;
+  width: 50%;
+}
+
+footer .links .code-box ul li p:first-child {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+footer .links .code-box ul li img {
+  border: 1px #ddd solid;
+  margin: 0 auto;
+  width: 105px;
+  height: 105px;
+  display: block;
+}
+
+footer .links .code-box ul li p:nth-child(3) {
+  line-height: 30px;
+}
+
+footer .links .code-box div:last-child {
+  line-height: 25px;
+  color: #666;
+  margin-top: 15px;
+}
+
+footer .links .code-box div:last-child p:first-child {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.copyright {
+  height: 90px;
+  background: #414141 url(../img/footer_logo.png) center center no-repeat;
+  background-size: contain;
 }
 
 #search {
@@ -1313,126 +1430,4 @@ body {
 
 .rightmenu-box .action-totop:hover {
   background-color: #2db4ea;
-}
-
-footer {
-  border-top: 1px #e1e1e1 solid;
-  background-color: #fff;
-}
-
-footer .tag {
-  padding: 20px;
-  height: 100px;
-  border-bottom: 1px #e1e1e1 solid;
-}
-
-footer .tag ul {
-  padding: 0 50px;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-footer .tag ul li {
-  line-height: 25px;
-  padding: 5px 0;
-  width: 25%;
-  float: left;
-  overflow: hidden;
-}
-
-footer .tag ul li img {
-  float: left;
-  margin-right: 10px;
-}
-
-footer .tag ul li p:first-child {
-  font-size: 24px;
-}
-
-footer .links {
-  position: relative;
-  padding: 20px 0;
-  width: 1200px;
-}
-
-footer .links .links-box {
-  position: relative;
-  width: 850px;
-}
-
-footer .links .links-box li {
-  float: left;
-  line-height: 30px;
-  width: 20%;
-}
-
-footer .links .links-box li span {
-  line-height: 40px;
-  font-size: 16px;
-  display: block;
-}
-
-footer .links .links-box li a {
-  color: #666;
-}
-
-footer .links .links-box li a:hover {
-  color: #337ab7;
-  text-decoration: none;
-}
-
-footer .links i {
-  display: block;
-  position: absolute;
-  right: 28%;
-  top: 15%;
-  width: 1px;
-  height: 70%;
-  background-color: #e1e1e1;
-}
-
-footer .links .code-box {
-  width: 350px;
-  padding: 0 34px 0 56px;
-}
-
-footer .links .code-box ul li {
-  line-height: 30px;
-  text-align: center;
-  color: #666;
-  width: 50%;
-}
-
-footer .links .code-box ul li p:first-child {
-  font-size: 16px;
-  line-height: 40px;
-}
-
-footer .links .code-box ul li img {
-  border: 1px #ddd solid;
-  margin: 0 auto;
-  width: 105px;
-  height: 105px;
-  display: block;
-}
-
-footer .links .code-box ul li p:nth-child(3) {
-  line-height: 30px;
-}
-
-footer .links .code-box div:last-child {
-  line-height: 25px;
-  color: #666;
-  margin-top: 15px;
-}
-
-footer .links .code-box div:last-child p:first-child {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.copyright {
-  height: 90px;
-  background: #414141 url(../img/footer_logo.png) center center no-repeat;
-  background-size: contain;
 }

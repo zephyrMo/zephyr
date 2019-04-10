@@ -45,6 +45,8 @@
   position: absolute;
   top: 0;
   right: 0;
+  color: #ccc;
+  font-size: 10px;
 }
 
 .currentNav > li:first-child:hover {
@@ -68,6 +70,8 @@
 
 .currentNav li:first-child:hover > span.bd_r {
   display: none;
+  font-size: 10px;
+  color: #000;
 }
 
 .currentNav li:first-child:hover > span i {
@@ -81,10 +85,12 @@
   border: 1px solid #eee;
   border-top: 0 none;
   position: absolute;
+  background-color: #fff;
   left: -1px;
   top: 30px;
 }
 
 .currentInfor li:hover {
+  cursor: pointer;
   color: #2db4ea;
 }

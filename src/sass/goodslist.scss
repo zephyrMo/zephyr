@@ -1,0 +1,234 @@
+@import '_var';
+@import '//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@import '../lib/bootstrap/css/bootstrap.css';
+@import '../lib/Font-Awesome-3.2.1/css/font-awesome.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css';
+@import '../css/base.css';
+@import 'header';
+@import 'search';
+@import 'footer';
+
+.section {
+    font-size: 14px;
+
+    a {
+        color: #212121;
+    }
+
+    min-height: 500px;
+    padding-bottom: 50px;
+    position: relative;
+
+    .typesearch {
+        height: 50px;
+        line-height: 50px;
+        background-color: #fff;
+        border-bottom: 1px #e8e8e8 solid;
+        color: #333;
+        padding: 0 5px;
+    }
+
+    .fold-box {
+
+        div,
+        span {
+            box-sizing: content-box;
+        }
+
+        overflow: hidden;
+        background-color: #fff;
+        position: relative;
+
+        .fold-content {
+            overflow: hidden;
+
+            div:first-child {
+                box-sizing: content-box;
+            }
+        }
+    }
+    
+        .typesort {
+            margin-top: 10px;
+            padding: 15px 15px;
+            background-color: #fff;
+            border-bottom: 1px #e8e8e8 solid;
+            color: #333;
+    
+            li {
+                float: left;
+                width: 60px;
+    
+                input[type=submit] {
+                    height: 30px;
+                    width: 50px;
+                    background-color: #2ab4e8;
+                    border: 1px #38b8eb solid;
+                    color: #fff;
+                    line-height: 28px;
+                    cursor: pointer;
+    
+                }
+            }
+    
+            li:nth-child(5) {
+                margin-left: 10px;
+                line-height: 28px;
+                width: 110px;
+    
+                span {
+                    text-align: center;
+                    width: 50px;
+                    border: 1px #e8e8e8 solid;
+    
+                    &:first-child {
+                        border-right: 0 none;
+                    }
+                }
+            }
+    
+            li:nth-child(6) {
+                width: 70px;
+                text-align: right;
+                line-height: 30px;
+            }
+    
+            li:nth-child(8) {
+                width: 12px;
+                line-height: 30px;
+                padding: 0 2px;
+            }
+    
+            li:nth-child(10) {
+                width: 70px;
+                text-align: right;
+                line-height: 30px;
+            }
+    
+            li:nth-child(12) {
+                width: 12px;
+                line-height: 30px;
+                padding: 0 2px;
+            }
+        }
+    
+        .typesort input {
+            box-sizing: border-box;
+            display: block;
+            width: 60px;
+            background-color: #fff;
+            border: 1px #e8e8e8 solid;
+            line-height: 28px;
+            text-align: center;
+        }
+    
+        /*排序*/
+        .typesort .sort {
+            height: 30px;
+            background-color: #fff;
+            border: 1px #e8e8e8 solid;
+            border-right: 0 none;
+            line-height: 30px;
+            text-align: center;
+            font-size: 14px;
+            padding-left: 8px;
+        }
+    
+        ul>li:first-child .sort {
+            padding-left: 0;
+        }
+    
+        ul>li:nth-child(4) {
+            border-right: 1px solid #e8e8e8;
+        }
+        ul .page{
+            width: 90px;
+            margin-right:25px;
+            margin-left:13%;
+            .paginations.two {
+                text-align:center;
+                width: 90px;
+                display: inline-block;
+                border: 1px solid #bbb;
+                border-radius: 3px;
+                input{
+                    display:inline-block;
+                    border:0 none;
+                }
+            }
+        }
+        .search-tab-title{
+            width: 80px;
+            li{
+                height:30px;
+                width:50%;
+                font-size:26px;
+                span{
+                    color:#666;
+                    line-height: 30px;
+                    margin:0 5px;
+                }
+            }
+        }
+
+}
+/*商品列表*/ 
+.productlist-2 .bd-2-f {
+    border: 1px #f5f5f5 solid;
+    border-left-width: 0;
+}
+/*页码*/
+.tcdPageCode {
+    padding: 15px 0 15px 20px;
+    text-align: left;
+    color: #333;
+    text-align: right;
+    /* background-color: #fff; */
+    span.disabled {
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 10px;
+        margin: 0 6px;
+        color: #999;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        vertical-align: middle;
+    }
+    .current {
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 10px;
+        margin: 0 6px;
+        color: #fff;
+        background-color: #2db4ea;
+        border: 1px solid #2db4ea;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        vertical-align: middle;
+    }
+    a,span {
+        display: inline-block;
+        color: #333;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 10px;
+        border: 1px solid #e8e8e8;
+        margin: 0 6px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        vertical-align: middle;
+    }
+}

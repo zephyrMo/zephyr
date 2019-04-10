@@ -1,0 +1,86 @@
+@import '_var';
+@import '../lib/bootstrap/css/bootstrap.css';
+@import '../lib/Font-Awesome-3.2.1/css/font-awesome.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css';
+@import '../css/base.css';
+@import 'header';
+input{
+    border:1px solid #ddd;
+    box-sizing:content-box;
+}
+.content{
+    font-size: 14px;
+    img{
+        border: none;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+.logo-box{
+    width: 325px;
+    height: 90px;
+}
+.reg-bar {
+    position: absolute;
+    top: 0;
+    background-color: #e8e8e8;
+}
+.content{
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    .reg-bar-tips {
+        position: relative;
+        .reg-bar.step-1 {
+            left: 0;
+            .item{
+                right: -35px;
+                position: absolute;
+                display: block;
+                border: 15px solid transparent;
+                border-left: 20px solid #2db4ea;
+                top: 0;
+            }
+        }
+        .reg-bar.step-2 {
+            right: 0;
+            .item{
+                position: absolute;
+                display: block;
+                border: 15px solid #e8e8e8;
+                border-left: 20px solid transparent;
+                top: 0;
+                left: -21px;
+            }
+        }
+        .reg-bar.active {
+            color: #fff;
+            background-color: #2db4ea;
+        }
+    }
+}
+.reg-frame .reg-frame-btn {
+    display: inline-block;
+    width: 100px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    border: 1px #2db4ea solid;
+    background-color: #2db4ea;
+}
+.reg-btn {
+    width: 330px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px #2db4ea solid;
+    background-color: #2db4ea;
+}
+.reg-frame input[name=treaty] {
+    left: 1px;
+    top: 3px;
+}
+.icon-check{
+    font-size:16px;
+    margin-right:-10px;
+}

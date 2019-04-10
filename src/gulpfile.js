@@ -16,7 +16,7 @@ gulp.task('server',function(){
 		// 服务器路径
 		// server:'./',
 		// 代理服务器，必须绑定到当前服务器路径一致
-		proxy:'http://bookuu:8080/html/shouye.html',
+		proxy:'http://bookuu:8080/html/detail.html',
 		// 端口
 		port:2323,
 		// 监听文件修改，自动刷新

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索-博库体验店</title>
+    <link rel="stylesheet" href="../css/goodslist.css">
+    <script src="../lib/requireJs/require.js" data-main="../js/main"></script>
+    <script src="../js/goodslist.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <div class="section bc-f5">
+        <div class="wd-1200 ma">
+            <!-- 分类搜索 -->
+            <div class="typesearch">
+                <p class="fl mr-40 allcategory">
+                    <a href="#">全部分类</a>
+                    &gt;
+                    <a class="mr-10" data-cid="10" href="#">图书</a>&gt; 
+                    <a class="mr-10" data-cid="1017" href="#">计算机网络</a>&gt; 
+                    <a class="mr-10" data-cid="101701" href="#">数据库</a>共
+                    <span class="cl-bl-l">
+                        1141
+                    </span>件商品
+                </p>
+                <div class="cb"></div>
+            </div>
+            <!-- 展开隐藏 -->
+            <div class="fold-box">
+                <div class="fold-content mh-140" data-id="140">
+                    <div class="lh-2p7 cl-3 fl wd-80 pd-20">分类：</div>
+                    <div class="lh-2p7 fl wd-950 pd-2010 bl-1-e8">
+                        <a class="db wd-20p cl-3 fl to-hd hover" href="#">数据库理论（373）</a>
+                        <a class="db wd-20p cl-3 fl to-hd hover" href="#">SQL（244）</a>
+                        <a class="db wd-20p cl-3 fl to-hd hover" href="#">其它数据库（168）</a>
+                        <a class="db wd-20p cl-3 fl to-hd hover" href="#">Access（153）</a>
+                        <a class="db wd-20p cl-3 fl to-hd hover" href="#">Oracle（152）</a>
+                        <a class="db wd-20p cl-3 fl to-hd hover" href="#">Foxpro（46）</a>
+                        <a class="db wd-20p cl-3 fl to-hd hover" href="#">DB2（4）</a>
+                        <a class="db wd-20p cl-3 fl to-hd hover" href="#">数据库（1）</a>
+                        <div class="cb"></div>
+                    </div>
+                    <div class="cb"></div>
+                </div>
+                <div class="fold-button cp wd-100 ht-30 lh-30 ma dn" style="position: absolute;right: 10px;top: 20px;">
+                    <p class="fl wd-70 ta-rt"><label>展开全部</label></p>
+                    <div class="fl wd-30 ta-ct"><span class="fa fa-angle-down"></span></div>
+                    <div class="cb"></div>
+                </div>
+            </div>
+            <!-- 类型排序 -->
+            <div class="tab-box">
+                <div class="typesort">
+                    <ul class="clearfix">
+                        <li>
+                            <div data-type="" class="sort cp">
+                                <a href="#">综合</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-type="price" class="sort cp clearfix">
+                                <span class="fl mr-2">价格</span>
+                                <div class="fl fs-10 sort-box">
+                                    <img src="https://bnmpstyle.bookuu.com/www/images/price.png" height="12">
+                                </div>
+                                <div class="cb"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-type="sale" class="sort cp clearfix">
+                                <span class="fl mr-2">销量</span>
+                                <div class="fl fs-10 sort-box">
+                                    <img src="https://bnmpstyle.bookuu.com/www/images/price.png" height="12">
+                                </div>
+                                <div class="cb"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-type="new" class="sort cp clearfix">
+                                <span class="fl mr-2">新品</span>
+                                <div class="fl fs-10 sort-box">
+                                    <img src="https://bnmpstyle.bookuu.com/www/images/price.png" height="12">
+                                </div>
+                                <div class="cb"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="fl">促销</span>
+                            <span
+                                class="fl">现货</span>
+                        </li>
+                        <li>价格：</li>
+                        <li>
+                            <input type="number" name="prices" value="">
+                        </li>
+                        <li> - </li>
+                        <li>
+                            <input type="number" name="pricee" value="">
+                        </li>
+                        <li>折扣：</li>
+                        <li>
+                            <input type="number" name="rates" value="">
+                        </li>
+                        <li> - </li>
+                        <li>
+                            <input type="number" name="ratee" value="">
+                        </li>
+                        <li>
+                            <input type="submit" value="检索" class="fl ml-10 cl-f">
+                            <div class="cb"></div>
+                        </li>
+                        <li class="page">
+                            <!-- 分页 css+div-->
+                            <div class="paginations two pr tp-4 mr-10">
+                                <a href="#">
+                                    <span class="fa fa-angle-left pr tp-2"></span>
+                                </a>
+                                <input type="text" readonly="readonly" disabled="" value="1 / 39">
+                                <a href="#">
+                                    <span class="fa fa-angle-right pr tp-2"></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <ul class="search-tab-title clearfix">
+                                <li class="wd-50p fl fs-20 cl-9 " data-type="0">
+                                    <span class="fa fa-th-list db cp listtype"></span>
+                                </li>
+                                <li class="wd-50p fl fs-20 cl-9 on-tab" data-type="1">
+                                    <span class="fa fa-th-large db cp listtype"></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 商品列表 -->
+            <ul class="search-tab-content bc-f">
+                <!-- 样式1 -->
+                <li class="clearfix typelist-1 dn"></li>
+                <!-- 样式2 -->
+                <li class="productlist-2 clearfix on-tab">
+                    <div class="scale-box">
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wd-20p fl">
+                            <div class="bd-2-f mg-5">
+                                <div class="pd-5 bd-1-e8 pr">
+                                    <div class="scale pd-10 oh"><a class="db square-box one-one bgimg lazyload visible"
+                                            data-bgimg="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);"
+                                            href="//www.bookuu.com/detail.php?id=100609079"
+                                            style="background-image: url(https://wdimg3.bookuu.com/goods/20/56/54/3600749.jpg);">
+                                        </a></div>
+                                    <div class="context pd-0010">
+                                        <div class="lh-40 mt-5">
+                                            <span class="fs-20 cl-rd-l mr-20 fl">¥52.40</span>
+                                            <del class="fs-16 cl-9 fr">¥68.00</del>
+                                            <div class="cb"></div>
+                                        </div>
+                                        <a class="db ht-40 lh-20 oh cl-6" href="">智能时代(大数据与智能革命重新定义未来)(精)</a>
+                                        <div class="ht-30 mt-10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tcdPageCode lh-30">
+                        <div class="row pagination fr">
+                            <div class="span fl">
+                                <div class="fl">
+                                    <ul>
+                                        <li class="fl"><span class="disabled">« 上一页</span></li>
+                                        <li class="fl"><span class="current">1</span><a
+                                                href="#">2</a><a
+                                                href="#">3</a><a
+                                                href="#">4</a><a
+                                                href="#">5</a>
+                                        </li>
+                                        <li class="fl"><a href="#"
+                                                class="next">下一页 »</a></li>
+                                        <li class="cb"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

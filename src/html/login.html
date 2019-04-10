@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>博库网-登录</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../lib/requireJs/require.js" data-main="../js/main"></script>
+    <script src="../js/login.js"></script>
+</head>
+<body>
+    <header></header>
+    <div class="login-banner-wrap">
+            <div class="content">
+                <div class="login-form fr">
+                    <div class="bb-1-e8">
+                        <p class="fs-16 cl-bl-l">博库用户登录</p>
+                    </div>
+                    <ul class="mt-20">
+                        <li class="item pr" style="zoom: 1;">
+                            <div class="fl login-user ta-ct">
+                                <label for="phone">
+                                    <span class="fa fa-user-circle"></span>
+                                </label>
+                            </div>
+                            <input class="fl" id="phone" type="text" placeholder="请输入手机号/用户名" name="user-name">
+                            <span class="fs-16 cl-67"></span>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="item mt-20 pr" style="zoom: 1;">
+                            <div class="fl login-user ta-ct">
+                                <label for="password">
+                                    <span class="fa fa-key"></span>
+                                </label>
+                            </div>
+                            <input class="fl" id="password" type="password" name="user-password">
+                            <div class="cb"></div>
+                        </li>
+                        <li class="mt-20">
+                            <div class="fl pr-10">
+                                <div class="fl">
+                                    <label for="authcode">
+                                        <p class="lh-38">验证码：</p>
+                                    </label>
+                                </div>
+                                <input id="authcode" class="br-4 fl" type="text" name="passport" maxlength="4">
+                                <div class="cb"></div>
+                            </div>
+                            <div class="fl lh-40">
+                                <img class="va-md pr-10 check_img" src="https://www.bookuu.com/authcode.php" alt="">
+                                <a class="cl-bl get_authcode" href="javascript:void(0);">换一张</a>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="mt-10">
+                            <!-- .reg-err 表单错误信息显示区域 除了找回密码发送验证 不用cl-rd 其余所有错误同意使用cl-rd -->
+                            <div class="fl reg-err">
+        
+                            </div>
+                            <div class="fr"><p><a class="cl-bl" href="#">找回密码</a></p></div>
+                            <div class="cb"></div>
+                        </li>
+                        <li>
+                            <button style="cursor:pointer" class="login-btn fs-16 lh-2p4" type="button">登录</button>
+                            <p class="fs-12 cl-rd">因博库帐号升级，若您无法正常登录，请尝试找回密码。</p>
+                        </li>
+                        <li class="mt-20">
+                            <div class="fl pr-50">
+                                <a href="//www.bookuu.com/passport/thirdparty/qqlogin.php?referer=aHR0cHM6Ly93d3cuYm9va3V1LmNvbQ=="><img class="va-md mr-5" src="https://bnmpstyle.bookuu.com/www/images/passport/qq-block.png" alt="">QQ登录</a>
+                            </div>
+                            <div class="fl">
+                                <a href="//www.bookuu.com/passport/thirdparty/alilogin.php?referer=aHR0cHM6Ly93d3cuYm9va3V1LmNvbQ=="><img class="va-md mr-5" src="https://bnmpstyle.bookuu.com/www/images/passport/zhifu-block.png" alt="">支付宝登录</a>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="mt-10">
+                            <div class="login-reg lh-38 ta-ct">
+                                <a class="cl-bl" href="passport/register.php">马上注册新用户</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cb"></div>
+            </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

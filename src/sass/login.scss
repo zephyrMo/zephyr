@@ -1,0 +1,85 @@
+@import '_var';
+@import '//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@import '../lib/bootstrap/css/bootstrap.css';
+@import '../lib/Font-Awesome-3.2.1/css/font-awesome.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css';
+@import '../css/base.css';
+@import 'footer';
+
+.logo-box{
+    width: 325px;
+    height: 90px;
+}
+header{
+    height: 115px;
+    border-bottom: 1px #cccccc solid;
+    .bb-1-e8{
+        border-bottom:0 none;
+    }
+}
+.login-banner-wrap {
+    font-size:14px;
+    height: 600px;
+    background: url(../img/bannner.jpg) no-repeat center;
+    .content {
+        width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        .login-form {
+            box-sizing:content-box;
+            width: 380px;
+            padding: 19px;
+            margin-top: 75px;
+            line-height: 2;
+            border: 1px #e8e8e8 solid;
+            background-color: #fff;
+            ul li.mt-20 .fl a:first-child{
+                color:#212121;
+                text-decoration: none;
+            }
+            .item {
+                border: 1px #e8e8e8 solid;
+                line-height: 40px;
+                border-radius: 4px;
+                input{
+                    box-sizing: content-box;
+                    height: 31px;
+                    line-height: 28px;
+                    padding: 6px 6px;
+                }
+                input::-webkit-input-placeholder{
+                    color:#ddd;
+                }
+                .login-user {
+                    width: 57px;
+                    line-height: 38px;
+                    font-size: 20px;
+                    background-color: #e4e4e4;
+                }
+            }
+        }
+    }
+}
+.login-form input[name=passport] {
+    width: 150px;
+    border: 1px #e8e8e8 solid;
+}
+
+.login-form input {
+    box-sizing: content-box;
+    height: 30px;
+    line-height: 28px;
+    padding: 4px 6px;
+}
+.login-btn {
+    width: 380px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px #2db4ea solid;
+    background-color: #2db4ea;
+}
+.login-reg {
+    background: url(../img/icon.png) no-repeat -50px 0px;
+}

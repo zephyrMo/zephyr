@@ -6,7 +6,9 @@ requirejs.config({
         'jQuery' : '../lib/jQuery/jquery-3.3.1',
         'bootstrap' : '../lib/bootstrap/js/bootstrap',
         'carousel' : 'zephyrCarousel',
-        'swiper' : 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min'
+        'swiper' : '../lib/swiper/swiper.min',
+        'register' : 'register',
+        'login' : 'login'
     },
     shim : {
         //配置依赖
@@ -21,9 +23,12 @@ requirejs.config({
         },
         'register' : {
             deps : ['jQuery']
+        },
+        'login' : {
+            deps : ['jQuery']
         }
     }
 })
 
 //引入
-require(['jQuery','bootstrap','carousel','swiper','register'])
+// require(['jQuery','bootstrap','carousel','swiper'])
