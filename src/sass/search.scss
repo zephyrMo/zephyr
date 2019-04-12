@@ -127,7 +127,27 @@ $mainColor:#2db4ea;
         }
     }
     border-bottom: 2px #3ab5e6 solid;
+
 }
 input::placeholder{
     color:#999;
+}
+#search .logo.active{
+    position:fixed;
+    width:100%;
+    top:0;
+    background-color: #fff;
+    z-index:10000;
+    padding-top:20px;;
+    height:80px;
+    border-bottom:3px solid $mainColor;
+    h1{
+        margin-left:20px;
+    }
+    .tip{
+        display:none;
+    }
+    .shop-cart{
+        margin-right:60px;
+    }
 }

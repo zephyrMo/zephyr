@@ -1,11 +1,63 @@
 $borderColor:#eee;
 $mainColor:#2db4ea;
+@import '_var';
 @import '../lib/bootstrap/css/bootstrap.css';
 @import '../lib/Font-Awesome-3.2.1/css/font-awesome.min.css';
-@import 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css';
+@import '../css/lib/swiper/swiper.min';
 @import '../css/base.css';
+@import '../lib/jcountdown/jcountdown.css';
 @import 'header';
 @import 'footer';
+@import 'menu';
+#search .logo.active{
+    position:fixed;
+    width:100%;
+    top:0;
+    background-color: #fff;
+    z-index:10000;
+    padding-top:20px;;
+    height:80px;
+    border-bottom:3px solid $mainColor;
+    h1{
+        margin-left:20px;
+    }
+    .tip{
+        display:none;
+    }
+    .shop-cart{
+        margin-right:60px;
+    }
+}
+.orange-slide{
+    background-color: orange;
+    background:no-repeat center;
+    background-size: contain;
+    height:271px;
+    line-height:271px;
+    text-align:center;
+    font-size:20px;
+    color:#fff;
+}
+.red-slide{
+    background-color: red;
+    background:no-repeat center;
+    background-size: contain;
+    height:271px;
+    line-height:271px;
+    text-align:center;
+    font-size:20px;
+    color:#fff;
+}
+.blue-slide{
+    background-color: blue;
+    background:no-repeat center;
+    background-size: contain;
+    height:271px;
+    line-height:271px;
+    text-align:center;
+    font-size:20px;
+    color:#fff;
+}
 #search{
     .logo{
         padding: 30px 0 0 0;
@@ -153,10 +205,16 @@ $mainColor:#2db4ea;
             padding-left: 52px;
             cursor: pointer;
             height:40px;
+            ul>div:first-child>a{
+                color:#fff;
+            }
             a{
+                color:#212121;
+            }
+            >a:nth-child(2){
                 line-height: 40px;
                 color:#fff;
-                display:block;
+                display:inline-block;
                 outline: none;
                 text-decoration: none;
                 font-size: 14px;
@@ -169,8 +227,8 @@ $mainColor:#2db4ea;
                 width: 50px;
                 height: 50px;
                 position: absolute;
-                left: 0;
-                top: 0;
+                left: 0px;
+                top: 0px;
                 background-repeat: no-repeat;
             }
             .titlePath{
@@ -373,6 +431,7 @@ $mainColor:#2db4ea;
         margin-bottom:20px;
         .flash-sale{
             line-height: 45px;
+            height:50px;
             font-weight:bold;
             border-bottom:2px solid #ea5863;
             .flash-title{
@@ -413,6 +472,10 @@ $mainColor:#2db4ea;
             width: 1200px;
             height:271px;
             background-color: #fff;
+            overflow:hidden;
+            position: relative;
+            top:-21px;
+            margin-bottom:-30px;
         }
     }
     #anchor-box1{
@@ -560,7 +623,7 @@ $mainColor:#2db4ea;
             }
         }
     }
-    #anchor-box2,#anchor-box3,#anchor-box4,#anchor-box5,#anchor-box6,#anchor-box7,#anchor-box8{
+    #anchor-box2,#anchor-box3,#anchor-box4,#anchor-box5,#anchor-box6,#anchor-box7,#anchor-box8,#anchor-box9{
         .tab-box{
             margin-bottom: 20px;
         }
@@ -681,7 +744,7 @@ $mainColor:#2db4ea;
             }
         }
     }
-    #anchor-box3{
+    #anchor-box3,#anchor-box9{
         .tab-box{
             div.clearfix{
                 ul{

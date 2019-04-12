@@ -154,3 +154,26 @@
 input::placeholder {
   color: #999;
 }
+
+#search .logo.active {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  z-index: 10000;
+  padding-top: 20px;
+  height: 80px;
+  border-bottom: 3px solid #2db4ea;
+}
+
+#search .logo.active h1 {
+  margin-left: 20px;
+}
+
+#search .logo.active .tip {
+  display: none;
+}
+
+#search .logo.active .shop-cart {
+  margin-right: 60px;
+}

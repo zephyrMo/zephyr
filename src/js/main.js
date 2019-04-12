@@ -8,7 +8,9 @@ requirejs.config({
         'carousel' : 'zephyrCarousel',
         'swiper' : '../lib/swiper/swiper.min',
         'register' : 'register',
-        'login' : 'login'
+        'login' : 'login',
+        'countdown' : '/lib/jcountdown/jquery.jcountdown.min',
+        'topMeunu' : 'topMenu'
     },
     shim : {
         //配置依赖
@@ -25,6 +27,12 @@ requirejs.config({
             deps : ['jQuery']
         },
         'login' : {
+            deps : ['jQuery']
+        },
+        'countdown' : {
+            deps : ['jQuery']
+        },
+        'topMenu' : {
             deps : ['jQuery']
         }
     }

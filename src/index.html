@@ -1,12 +1,2174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>博库网-博库体验店</title>
 </head>
+<link rel="stylesheet" href="css/shouye.css">
+<script src="lib/requireJs/require.js" data-main="js/main"></script>
+<script src="js/shouye.js"></script>
+
 <body>
-    <h1>首页</h1>
+    <header>
+        <!-- 登录信息 -->
+        <div id="header_nav">
+            <div class="container">
+                <ul class="login_reg fl clearfix">
+                    <li>
+                        <span id="login">登录</span>
+                    </li>
+                    <li>
+                        <span id="registet">免费注册</span>
+                    </li>
+                    <li>
+                        <span class="iconfont icon-mobile-phone"></span>
+                        <span>下载博库APP</span>
+                    </li>
+                </ul>
+                <ul class="currentNav fr clearfix">
+                    <li>
+                        <span>
+                            <span>我的博库</span>
+                            <i class="iconfont icon-angle-down"></i>
+                        </span>
+                        <ul class="currentInfor">
+                            <li>我的订单</li>
+                            <li>我的优惠券</li>
+                            <li>我的收藏</li>
+                            <li>我的收入</li>
+                            <li>官方消息</li>
+                        </ul>
+                        <span class="bd_r">|</span>
+                    </li>
+                    <li>
+                        <span>收藏夹</span>
+                        <span class="bd_r">|</span>
+                    </li>
+                    <li>
+                        <span>店铺管理</span>
+                        <span class="bd_r">|</span>
+                    </li>
+                    <li>
+                        <span>联系客服</span>
+                        <span class="bd_r">|</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+    <!-- logo+搜索+购物车 -->
+    <div id="search">
+        <div class="logo container">
+            <h1>博库网</h1>
+            <div class="search-box">
+                <div class="search-container">
+                    <input type="text" placeholder="余华">
+                </div>
+                <i class="toSearch iconfont icon-search"></i>
+                <p class="tip">
+                    <a target="_blank" href="#" title="茅台酒收藏">茅台酒收藏</a>
+                    <span>|</span>
+                    <a target="_blank" class="cl-9" href="#" title="夏摩山谷">夏摩山谷</a>
+                    <span>|</span>
+                    <a target="_blank" class="cl-9" href="#" title="崔永元 有话说">崔永元 有话说</a>
+                    <span>|</span>
+                    <a target="_blank" class="cl-9" href="#" title="林清玄">林清玄</a>
+                    <span>|</span>
+                    <a target="_blank" class="cl-9" href="#" title="邓小平大决策">邓小平大决策</a>
+                </p>
+            </div>
+            <div class="shop-cart">
+                <a href="#">
+                    <i class="iconfont icon-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+        </div>
+        <!-- 分类 -->
+        <div class="nav-box container clearfix">
+            <div class="type fl">
+                <a href="#">
+                    <span class="iconfont icon-reorder"></span>
+                    所有商品分类
+                </a>
+            </div>
+            <div class="nav fl">
+                <!--固定导航菜单-->
+                <a class="fl" href="#"><span>首页</span></a>
+                <a class="fl" href="#"><span>新品</span></a>
+                <a class="fl" href="#"><span>限时购</span></a>
+                <a class="fl" href="#"><span>排行榜</span></a>
+                <!--自定义导航菜单-->
+                <span class="fl bd_c">|</span>
+                <a class="fl" href="#">
+                    <span>图书馆</span>
+                </a>
+                <a class="fl" href="#">
+                    <span>文创馆</span>
+                </a>
+                <a class="fl" href="#">
+                    <span>生活美学馆</span>
+                </a>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </div>
+    <!-- 轮播图区域 -->
+    <div class="section">
+        <!-- banner、菜单、公告 -->
+        <div class="menu fl">
+            <div class="title">
+                <i class="iconfont" style="background-position:top left"></i>
+                <a href="#">标题1</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                    <!-- <div class="bb-1-e pb-5">
+                        <a target="_blank" href="#"
+                            class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">村上春树</a>
+                        <a target="_blank" href="#"
+                            class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">东野圭吾</a>
+                        <a target="_blank" href="#"
+                            class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">诺贝尔文学奖</a>
+                        <a target="_blank" href="#"
+                            class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">茅盾文学奖</a>
+                        <a target="_blank" href="#"
+                            class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">明朝那些事儿</a>
+                        <a target="_blank" href="#"
+                            class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">我们仨</a>
+                        <a target="_blank" href="#"
+                            class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">平凡的世界</a>
+                        <div class="cb"></div>
+                    </div>
+                    <div class="minh-215 mb-5">
+                        <li class="clearfix fs-13 lh-20">
+                            <div class="wd-110 fl ">
+                                <a target="_blank" href="#" class="fl mr-15 fw-bd">诗歌散文</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="wd-650 cl-6 fl" style="width: 650px;">
+                                <a target="_blank" href="#" class="fl mr-15">中国古诗词</a>
+                                <a target="_blank" href="#" class="fl mr-15">中国现当代诗歌</a>
+                                <a target="_blank" href="#" class="fl mr-15">外国诗歌</a>
+                                <a target="_blank" href="#" class="fl mr-15">中国古代随笔</a>
+                                <a target="_blank" href="#" class="fl mr-15">中国现当代随笔</a>
+                                <a target="_blank" href="#" class="fl mr-15">外国随笔</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="clearfix fs-13 lh-20">
+                            <div class="wd-110 fl ">
+                                <a target="_blank" href="#" class="fl mr-15 fw-bd">小说</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="wd-650 cl-6 fl" style="width: 650px;">
+                                <a target="_blank" href="#" class="fl mr-15">名家名作</a>
+                                <a target="_blank" href="#" class="fl mr-15">中国古典小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">四大名著</a>
+                                <a target="_blank" href="#" class="fl mr-15">世界名著</a>
+                                <a target="_blank" href="#" class="fl mr-15">外国小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">都市情感</a>
+                                <a target="_blank" href="#" class="fl mr-15">武侠小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">侦探/悬疑/推理</a>
+                                <a target="_blank" href="#" class="fl mr-15">职场小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">官场小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">军事小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">魔幻小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">科幻小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">恐怖小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">乡土小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">社会小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">历史小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">影视小说</a>
+                                <a target="_blank" href="#" class="fl mr-15">民间文学</a>
+                                <a target="_blank" href="#" class="fl mr-15">纪实文学</a>
+                                <a target="_blank" href="#" class="fl mr-15">其它</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="clearfix fs-13 lh-20">
+                            <div class="wd-110 fl ">
+                                <a target="_blank" href="#" class="fl mr-15 fw-bd">青春文学</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="wd-650 cl-6 fl" style="width: 650px;">
+                                <a target="_blank" href="#" class="fl mr-15">校园</a>
+                                <a target="_blank" href="#" class="fl mr-15">爱情/情感</a>
+                                <a target="_blank" href="#" class="fl mr-15">叛逆/成长</a>
+                                <a target="_blank" href="#" class="fl mr-15">娱乐/偶像</a>
+                                <a target="_blank" href="#" class="fl mr-15">爆笑/无厘头</a>
+                                <a target="_blank" href="#" class="fl mr-15">玄幻</a>
+                                <a target="_blank" href="#" class="fl mr-15">悬疑/惊悚</a>
+                                <a target="_blank" href="#" class="fl mr-15">穿越/重生/架空</a>
+                                <a target="_blank" href="#" class="fl mr-15">古代言情</a>
+                                <a target="_blank" href="#" class="fl mr-15">其它</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="clearfix fs-13 lh-20">
+                            <div class="wd-110 fl ">
+                                <a target="_blank" href="#" class="fl mr-15 fw-bd">文集理论</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="wd-650 cl-6 fl" style="width: 650px;">
+                                <a target="_blank" href="#" class="fl mr-15">文学理论</a>
+                                <a target="_blank" href="#" class="fl mr-15">评论与鉴赏</a>
+                                <a target="_blank" href="#" class="fl mr-15">文集</a>
+                                <a target="_blank" href="#" class="fl mr-15">作品集</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="clearfix fs-13 lh-20">
+                            <div class="wd-110 fl ">
+                                <a target="_blank" href="#" class="fl mr-15 fw-bd">古籍</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="wd-650 cl-6 fl" style="width: 650px;">
+                                <a target="_blank" href="#" class="fl mr-15">经部</a>
+                                <a target="_blank" href="#" class="fl mr-15">史部</a>
+                                <a target="_blank" href="#" class="fl mr-15">子部</a>
+                                <a target="_blank" href="#" class="fl mr-15">集部</a>
+                                <a target="_blank" href="#" class="fl mr-15">四库全书</a>
+                                <a target="_blank" href="#" class="fl mr-15">古籍工具书</a>
+                                <a target="_blank" href="#" class="fl mr-15">其它</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="clearfix fs-13 lh-20">
+                            <div class="wd-110 fl ">
+                                <a target="_blank" href="#" class="fl mr-15 fw-bd">艺术</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="wd-650 cl-6 fl" style="width: 650px;">
+                                <a target="_blank" href="#" class="fl mr-15">艺术理论</a>
+                                <a target="_blank" href="#" class="fl mr-15">音乐</a>
+                                <a target="_blank" href="#" class="fl mr-15">舞蹈</a>
+                                <a target="_blank" href="#" class="fl mr-15">绘画</a>
+                                <a target="_blank" href="#" class="fl mr-15">设计</a>
+                                <a target="_blank" href="#" class="fl mr-15">建筑</a>
+                                <a target="_blank" href="#" class="fl mr-15">戏曲</a>
+                                <a target="_blank" href="#" class="fl mr-15">戏剧</a>
+                                <a target="_blank" href="#" class="fl mr-15">影视/媒体</a>
+                                <a target="_blank" href="#" class="fl mr-15">收藏/鉴赏</a>
+                                <a target="_blank" href="#" class="fl mr-15">书法篆刻</a>
+                                <a target="_blank" href="#" class="fl mr-15">雕塑</a>
+                                <a target="_blank" href="#" class="fl mr-15">摄影</a>
+                                <a target="_blank" href="#" class="fl mr-15">小人书/连环画</a>
+                                <a target="_blank" href="#" class="fl mr-15">各国艺术概况</a>
+                                <a target="_blank" href="#" class="fl mr-15">艺术类考试</a>
+                                <a target="_blank" href="#" class="fl mr-15">工艺美术</a>
+                                <a target="_blank" href="#" class="fl mr-15">民间艺术</a>
+                                <a target="_blank" href="#" class="fl mr-15">人体艺术</a>
+                                <a target="_blank" href="#" class="fl mr-15">其它</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                        <li class="clearfix fs-13 lh-20">
+                            <div class="wd-110 fl ">
+                                <a target="_blank" href="#" class="fl mr-15 fw-bd">动漫/幽默</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="wd-650 cl-6 fl" style="width: 650px;">
+                                <a target="_blank" href="#" class="fl mr-15">大陆漫画</a>
+                                <a target="_blank" href="#" class="fl mr-15">港台漫画</a>
+                                <a target="_blank" href="#" class="fl mr-15">日韩漫画</a>
+                                <a target="_blank" href="#" class="fl mr-15">欧美漫画</a>
+                                <a target="_blank" href="#" class="fl mr-15">其他国外漫画</a>
+                                <a target="_blank" href="#" class="fl mr-15">动漫绘制技法</a>
+                                <a target="_blank" href="#" class="fl mr-15">幽默/笑话集</a>
+                                <a target="_blank" href="#" class="fl mr-15">其它</a>
+                                <div class="cb"></div>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
+                    </div> -->
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -100px"></i>
+                <a href="#">标题2</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -50px"></i>
+                <a href="#">标题3</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -150px"></i>
+                <a href="#">标题4</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -200px"></i>
+                <a href="#">标题5</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -250px"></i>
+                <a href="#">标题6</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -300px"></i>
+                <a href="#">标题7</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -350px"></i>
+                <a href="#">标题8</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                </ul>
+            </div>
+            <div class="title">
+                <i class="iconfont" style="background-position:0 -400px"></i>
+                <a href="#">标题9</a>
+                <i class="titlePath iconfont icon-angle-right"></i>
+                <ul>
+                </ul>
+            </div>
+        </div>
+        <!-- 轮播图 -->
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background:red;">Slide 1</div>
+                    <div class="swiper-slide" style="background:blue;">Slide 2</div>
+                    <div class="swiper-slide" style="background:green;">Slide 3</div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- 公告 -->
+        <div class="notice">
+            <div class="title clearfix">
+                <ul>
+                    <li class="circle">
+                        <img src="https://bnmpstyle.bookuu.com/wap/images/default_shop.png" alt="">
+                    </li>
+                    <li>博库体验店</li>
+                </ul>
+                <div class="shareShop">
+                    <div>分享店铺:</div>
+                    <div class="fl" data-tag="share_1">
+                        <a class="bds_tsina" data-cmd="tsina"
+                            style="background-image: url(https://bnmpstyle.bookuu.com/www/images/sina.png);background-position: center center;padding-left: 0;margin: 10px 10px 0 2px;"
+                            title="分享到新浪微博"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin"
+                            style="background-image: url(https://bnmpstyle.bookuu.com/www/images/weixin.png);background-position: center center;padding-left: 0;margin: 10px 10px 0 2px;"
+                            title="分享到微信"></a>
+                        <a class="bds_qzone" data-cmd="qzone" href="#"
+                            style="background-image: url(https://bnmpstyle.bookuu.com/www/images/qq.png);background-position: center center;padding-left: 0;margin: 10px 0 0 2px;"
+                            title="分享到QQ空间"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="loginArea">
+                <a href="#">一键开店</a>
+            </div>
+            <div class="server-notice">
+                <p>服务公告</p>
+                <div class="notice-links">
+                    <a href="#">
+                        <span class="iconfont icon-angle-right"></span>
+                        IC充值卡兑换通道
+                    </a>
+                    <a href="#">
+                        <span class="iconfont icon-angle-right"></span>
+                        IC充值卡兑换通道
+                    </a>
+                    <a href="#">
+                        <span class="iconfont icon-angle-right"></span>
+                        IC充值卡兑换通道
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 正品保证 -->
+        <div class="salable">
+            <div class="salableBox">
+                <label class="mr-60"><span></span>正品保证</label>
+                <label class="mr-60"><span></span>七天无理由退货</label>
+                <label class="mr-60"><span></span>全场满59包邮</label>
+            </div>
+        </div>
+        <!-- 展示部分 -->
+        <div class="main">
+            <!-- 倒计时 限时抢购 -->
+            <div class="time-limit container">
+                <div class="flash-sale clearfix">
+                    <p class="flash-title fl">
+                        <img src="https://bnmpstyle.bookuu.com/www/images/icon/flashsale.png" alt="限时抢购">
+                    </p>
+                    <a href="#" class="flash-links">
+                        总有你想不到的低价
+                        <span class="iconfont icon-angle-right"></span>
+                    </a>
+                    <p class="fr"><span class="fr">后结束抢购</span></p>
+                    <div class="fr">
+                        <div class="countdown">
+
+                        </div>
+                    </div>
+                    <span class="fr">当前场次</span>
+                </div>
+                <div class="flash-slider">
+                    <div class="swiper-container1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide blue-slide">slider1</div>
+                            <div class="swiper-slide red-slide">slider2</div>
+                            <div class="swiper-slide orange-slide">slider3</div>
+                            <div class="swiper-slide blue-slide">slider4</div>
+                            <div class="swiper-slide red-slide">slider5</div>
+                            <div class="swiper-slide orange-slide">slider6</div>
+                            <div class="swiper-slide blue-slide">slider7</div>
+                            <div class="swiper-slide red-slide">slider8</div>
+                            <div class="swiper-slide orange-slide">slider9</div>
+                            <div class="swiper-slide blue-slide">slider10</div>
+                            <div class="swiper-slide red-slide">slider11</div>
+                            <div class="swiper-slide orange-slide">slider12</div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 板块 模板 卡片 -->
+            <!-- 图文板块 -->
+            <div class="anchor-box" id="anchor-box1">
+                <ul class="clearfix">
+                    <!-- 重磅推荐 -->
+                    <li class="fl">
+                        <div class="card-box">
+                            <div class="card">
+                                <i class="iconfont icon-eye-open"></i>
+                                <span>重磅推荐</span>
+                                <a href="#">博库精选推荐<i class="iconfont  icon-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <ul class="scale-box clearfix">
+                            <li>
+                                <div><a href="#">
+                                        <img alt="品质好书"
+                                            src="https://media2.v.bookuu.com/activity/13/57/20170811135737589.jpg">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img alt="独家特供"
+                                            src="https://media2.v.bookuu.com/activity/10/01/20170815100145178.jpg">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img src="https://media2.v.bookuu.com/activity/11/50/20170816115027610.jpg"
+                                            alt="传家礼品">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img src="https://media2.v.bookuu.com/activity/11/52/20170816115237948.jpg"
+                                            alt="好书成套">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img src="https://media2.v.bookuu.com/activity/09/58/20170815095814351.jpg"
+                                            alt="文创">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img src="https://media2.v.bookuu.com/activity/12/00/20171219120005511.jpg"
+                                            alt="生活美学">
+                                    </a></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 新品速递 -->
+                    <li class="fl secondLi">
+                        <div class="card-box">
+                            <div class="card">
+                                <i class="iconfont icon-book"></i>
+                                <span>新品速递</span>
+                                <a href="#">发现品质生活<i class="iconfont  icon-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <ul class="scale-box clearfix">
+                            <li>
+                                <div><a href="#">
+                                        <img alt="畅销新品"
+                                            src="https://media2.v.bookuu.com/activity/14/51/20190131145112858.jpg">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img alt="一周新书"
+                                            src="https://media2.v.bookuu.com/activity/14/00/20170811140055574.jpg">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img src="https://media2.v.bookuu.com/activity/11/54/20170816115445894.jpg"
+                                            alt="签名专区">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img src="https://media2.v.bookuu.com/activity/11/54/20170816115445584.jpg"
+                                            alt="书单来了">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img src="https://media2.v.bookuu.com/activity/11/07/20180123110737760.jpg@!q75	"
+                                            alt="茶具">
+                                    </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">
+                                        <img src="https://media2.v.bookuu.com/activity/09/58/20170815095814201.jpg"
+                                            alt="玩具嘉年华">
+                                    </a></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 热销排行 -->
+                    <li class="fr">
+                        <div class="card-box">
+                            <div class="card">
+                                <i class="iconfont icon-fire"></i>
+                                <span>热销排行</span>
+                                <a href="#">网络全民挚爱<i class="iconfont  icon-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="tab-box">
+                            <ul class="tab-title clearfix">
+                                <li><span>图书</span></li>
+                                <li><span>童书</span></li>
+                                <li><span>文学</span></li>
+                                <li><span>教辅</span></li>
+                            </ul>
+                            <ul class="tab-content">
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <img src="https://bnmpstyle.bookuu.com/www/images/svg/first-block.svg"
+                                                alt="">
+                                        </div>
+                                        <p>我们仨</p>
+                                        <p class="fr">销量：535470</p>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <img src="https://bnmpstyle.bookuu.com/www/images/svg/second-block.svg"
+                                                alt="">
+                                        </div>
+                                        <p>活着/余华作品</p>
+                                        <p class="fr">销量：417650</p>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <img src="https://bnmpstyle.bookuu.com/www/images/svg/third-block.svg"
+                                                alt="">
+                                        </div>
+                                        <p>偷影子的人</p>
+                                        <p class="fr">销量：371639</p>
+                                    </a>
+                                    <a href="#">
+                                        <div>4.</div>
+                                        <p>三体（1-3 共3册）</p>
+                                        <p class="fr">销量：352044</p>
+                                    </a>
+                                    <a href="#">
+                                        <div>5.</div>
+                                        <p>狼王梦/动物小说大王沈石溪品藏书系</p>
+                                        <p class="fr">销量：335708</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 博库热推 -->
+            <div class="anchor-box" id="anchor-box2">
+                <div class="tab-box">
+                    <div class="navyblue-border clearfix">
+                        <p class="fl">
+                            <img src="https://style2.bookuu.com/bnmp/www/images/icon/plate_52_4.png" alt="">
+                            博库热推
+                        </p>
+                        <p class="fr">
+                            <a href="#">编辑精选</a>
+                            <a href="#">新书上架</a>
+                            <a href="#">畅销热卖</a>
+                            <a href="#">一种关注</a>
+                            <a href="#">期刊MOOK</a>
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 商品列表1 -->
+                        <div class="clearfix">
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/16/46/20170807164644391.jpg@!q75" alt="">
+                            </a>
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 商品列表2 -->
+                        <div class="clearfix">
+                            <ul>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/10/43/20180828104329956.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 图书频道 -->
+            <div class="anchor-box" id="anchor-box3">
+                <div class="tab-box">
+                    <div class="navyblue-border clearfix">
+                        <p class="fl">
+                            <img src="https://style2.bookuu.com/bnmp/www/images/icon/plate_52_2.png" alt="">
+                            图书频道
+                        </p>
+                        <p class="fr">
+                            <a href="#">诗文</a>
+                            <a href="#">书画</a>
+                            <a href="#">音乐</a>
+                            <a href="#">小说</a>
+                            <a href="#">哲学</a>
+                            <a href="#">宗教</a>
+                            <a href="#">历史</a>
+                            <a href="#">社会</a>
+                            <a href="#">政法</a>
+                            <a href="#">传记</a>
+                            <a href="#">文创</a>
+                            <a href="#">明星书</a>
+                            <a href="#">财经</a>
+                            <a href="#">科普</a>
+                            <a href="#">古籍</a>
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 商品列表1 -->
+                        <div class="clearfix">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 商品列表2 -->
+                        <div class="clearfix">
+                            <ul>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 广告图集 -->
+            <div class="advert">
+                <ul class="clearfix">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <!-- 童书频道 -->
+            <div class="anchor-box" id="anchor-box4">
+                <div class="tab-box">
+                    <div class="navyblue-border clearfix">
+                        <p class="fl">
+                            <img src="https://style2.bookuu.com/bnmp/www/images/icon/plate_52_4.png" alt="">
+                            童书频道
+                        </p>
+                        <p class="fr">
+                            <a href="#">新品</a>
+                            <a href="#">故事</a>
+                            <a href="#">绘本</a>
+                            <a href="#">英语</a>
+                            <a href="#">科普</a>
+                            <a href="#">启蒙</a>
+                            <a href="#">益智</a>
+                            <a href="#">成长</a>
+                            <a href="#">玩具书</a>
+                            <a href="#">动漫</a>
+                            <a href="#">0-3</a>
+                            <a href="#">4-6</a>
+                            <a href="#">7-14</a>
+                            <a href="#">胎教</a>
+                            <a href="#">育儿</a>
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 商品列表1 -->
+                        <div class="clearfix">
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/14/42/20190111144255634.jpg@!q75" alt="">
+                            </a>
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 商品列表2 -->
+                        <div class="clearfix">
+                            <ul>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/14/34/20190111143448483.jpg@!q75" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 广告图集 -->
+            <div class="advert">
+                <ul class="clearfix">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <!-- 分类推荐 -->
+            <div class="anchor-box" id="anchor-box5">
+                <div class="tab-box">
+                    <div class="navyblue-border clearfix">
+                        <p class="fl">
+                            <img src="https://style2.bookuu.com/bnmp/www/images/icon/plate_52_5.png" alt="">
+                            分类推荐
+                        </p>
+                        <p class="fr">
+                            <a href="#">美妆</a>
+                            <a href="#">美食</a>
+                            <a href="#">居家</a>
+                            <a href="#">旅行</a>
+                            <a href="#">健身</a>
+                            <a href="#">投资</a>
+                            <a href="#">职场</a>
+                            <a href="#">心理</a>
+                            <a href="#">IT</a>
+                            <a href="#">设计</a>
+                            <a href="#">影视小说</a>
+                            <a href="#">悬疑</a>
+                            <a href="#">科幻</a>
+                            <a href="#">青春</a>
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 商品列表1 -->
+                        <div class="clearfix">
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/16/32/20190129163206344.jpg" alt="">
+                            </a>
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 商品列表2 -->
+                        <div class="clearfix">
+                            <ul>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/16/32/20190129163206138.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 人气作家 -->
+            <div class="anchor-box" id="anchor-box6">
+                <div class="tab-box">
+                    <div class="navyblue-border clearfix">
+                        <p class="fl">
+                            <span class="iconfont icon-group"></span>
+                            人气作家
+                        </p>
+                        <p class="fr">
+                            <a href="#">杜甫</a>
+                            <a href="#">金庸</a>
+                            <a href="#">严歌苓</a>
+                            <a href="#">村上春树</a>
+                            <a href="#">张爱玲</a>
+                            <a href="#">曹文轩</a>
+                            <a href="#">奈保尔</a>
+                        </p>
+                    </div>
+                    <div class="my-tab-content clearfix">
+                        <div class="fl hot-1">
+                            <div>
+                                <img src="https://media2.v.bookuu.com/activity/21/24/20190215212434688.jpg" alt="">
+                            </div>
+                            <p class="author">杜甫</p>
+                            <p class="author-txt">
+                                712~770，诗圣。杜诗中生活苦乐交织的真挚感，是古代其他诗人都未曾到达的醇厚境界，而其遣词造句、象征、音律和感情方面展现出令人咋舌甚至望而却步的复杂性，如代表作《登高》、《江亭》、《秋兴》等。
+                            </p>
+                            <div class="path"></div>
+                        </div>
+                        <div class="fl hot-2">
+                            <!-- 商品展示 -->
+                            <div class="clearfix">
+                                <div class="fl first">
+                                    <a href="#" class="pic"></a>
+                                </div>
+                                <div class="fl second">
+                                    <a href="#">杜诗详注(共8册)/中国古典文学基本丛书</a>
+                                    <p>
+                                        <span>¥223.50</span>
+                                        <del>¥298.00</del>
+                                    </p>
+                                    <p>杜诗艺术成就极高，为历代所重视，注家蜂起，到宋代有“千家注杜”之说。清仇兆鳌费20年搜集各家注本辑为本书，资料极为详尽，为阅读杜诗的一种重要的参考书。</p>
+                                </div>
+                            </div>
+                            <!-- 分隔 -->
+                            <div class="hot-seprate">
+                                <p>其他作品</p>
+                                <span></span>
+                                <div class="path"></div>
+                            </div>
+                            <!-- 商品列表4个 -->
+                            <ul class="product-list clearfix">
+                                <li>
+                                    <div>
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="contxt">
+                                        <a href="#">杜甫全集校注(共12册)(精)</a>
+                                        <p>
+                                            <span>¥654.50</span>
+                                            <span>|</span>
+                                            <del>¥850.00</del>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="contxt">
+                                        <a href="#">杜甫全集校注(共12册)(精)</a>
+                                        <p>
+                                            <span>¥654.50</span>
+                                            <span>|</span>
+                                            <del>¥850.00</del>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="contxt">
+                                        <a href="#">杜甫全集校注(共12册)(精)</a>
+                                        <p>
+                                            <span>¥654.50</span>
+                                            <span>|</span>
+                                            <del>¥850.00</del>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="contxt">
+                                        <a href="#">杜甫全集校注(共12册)(精)</a>
+                                        <p>
+                                            <span>¥654.50</span>
+                                            <span>|</span>
+                                            <del>¥850.00</del>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 广告图 -->
+                        <div class="hot-advert fr">
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/22/19/20190215221933426.jpg" alt="">
+                            </a>
+                            <div>
+                                <div class="fl"><a href="#"><img
+                                            src="https://media2.v.bookuu.com/activity/20/52/20190215205220154.jpg"
+                                            alt=""></a></div>
+                                <div class="fr"><a href="#"><img
+                                            src="https://media2.v.bookuu.com/activity/00/22/20190216002239315.jpg"
+                                            alt=""></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 文创频道 -->
+            <div class="anchor-box" id="anchor-box7">
+                <div class="tab-box">
+                    <div class="navyblue-border clearfix">
+                        <p class="fl">
+                            <img src="https://style2.bookuu.com/bnmp/www/images/icon/plate_52_2.png" alt="">
+                            文创频道
+                        </p>
+                        <p class="fr">
+                            <a href="#">办公文具</a>
+                            <a href="#">学生文具</a>
+                            <a href="#">进口文具</a>
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 商品列表1 -->
+                        <div class="clearfix">
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/14/01/20170811140135963.jpg" alt="">
+                            </a>
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 商品列表2 -->
+                        <div class="clearfix">
+                            <ul>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#">
+                                <img src="https://media2.v.bookuu.com/activity/14/01/20170811140135428.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 美学频道 -->
+            <div class="anchor-box" id="anchor-box8">
+                <div class="tab-box">
+                    <div class="navyblue-border clearfix">
+                        <p class="fl">
+                            <img src="https://style2.bookuu.com/bnmp/www/images/icon/plate_52_7.png" alt="">
+                            美学频道
+                        </p>
+                        <p class="fr">
+                            <a href="#">茶</a>
+                            <a href="#">香</a>
+                        </p>
+                    </div>
+                    <!-- 内容 -->
+                    <div class="my-tab-content clearfix">
+                        <ul>
+                            <li>
+                                <div class="clearfix">
+                                    <div class="fl">
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="fl">
+                                        <a href="#" class="box8-title">凌云花器 紫光檀黄铜</a>
+                                        <div>紫光檀沉稳大方，黄铜靓而不艳，木铜结合，古韵悠扬。</div>
+                                        <div>
+                                            <span>¥76.00</span>
+                                            <del>¥108.00</del>
+                                        </div>
+                                        <div>
+                                            <span class="iconfont  icon-shopping-cart"></span>
+                                            加入购物车
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clearfix">
+                                    <div class="fl">
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="fl">
+                                        <a href="#" class="box8-title">凌云花器 紫光檀黄铜</a>
+                                        <div>紫光檀沉稳大方，黄铜靓而不艳，木铜结合，古韵悠扬。</div>
+                                        <div>
+                                            <span>¥76.00</span>
+                                            <del>¥108.00</del>
+                                        </div>
+                                        <div>
+                                            <span class="iconfont  icon-shopping-cart"></span>
+                                            加入购物车
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clearfix">
+                                    <div class="fl">
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="fl">
+                                        <a href="#" class="box8-title">凌云花器 紫光檀黄铜</a>
+                                        <div>紫光檀沉稳大方，黄铜靓而不艳，木铜结合，古韵悠扬。</div>
+                                        <div>
+                                            <span>¥76.00</span>
+                                            <del>¥108.00</del>
+                                        </div>
+                                        <div>
+                                            <span class="iconfont  icon-shopping-cart"></span>
+                                            加入购物车
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clearfix">
+                                    <div class="fl">
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="fl">
+                                        <a href="#" class="box8-title">凌云花器 紫光檀黄铜</a>
+                                        <div>紫光檀沉稳大方，黄铜靓而不艳，木铜结合，古韵悠扬。</div>
+                                        <div>
+                                            <span>¥76.00</span>
+                                            <del>¥108.00</del>
+                                        </div>
+                                        <div>
+                                            <span class="iconfont  icon-shopping-cart"></span>
+                                            加入购物车
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#">
+                            <img src="https://media2.v.bookuu.com/activity/09/47/20171016094748210.jpg@!q75" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 影音频道 -->
+            <div class="anchor-box" id="anchor-box9">
+                <div class="tab-box">
+                    <div class="navyblue-border clearfix">
+                        <p class="fl">
+                            <img src="https://style2.bookuu.com/bnmp/www/images/icon/plate_52_3.png" alt="">
+                            影音频道
+                        </p>
+                        <p class="fr">
+                            <a href="#">影音</a>
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 商品列表1 -->
+                        <div class="clearfix">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 商品列表2 -->
+                        <div class="clearfix">
+                            <ul>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <div class="scale">
+                                            <a href="#" class="pic"></a>
+                                        </div>
+                                        <div class="contxt">
+                                            <a href="#">小牛顿人文馆．写给孩子的世界名人传记B辑（全12册）</a>
+                                            <p>
+                                                <span class="fs-16 cl-rd-l ">¥144.00</span>
+                                                <span class="cl-9">|</span>
+                                                <del class="fs-12 cl-9">¥300.00</del>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧导航 -->
+        <div class="rightmenu-box">
+            <div class="rightmenu">
+                <a href="#" title="联系客服">
+                    <span class="iconfont icon-comments"></span>
+                    <p>联<br>系<br>客<br>服</p>
+                </a>
+                <a href="#" title="购物车">
+                    <span class="iconfont icon-shopping-cart"></span>
+                    <p>购<br>物<br>车</p>
+                </a>
+                <a href="#" title="签到">
+                    <span class="iconfont icon-edit"></span>
+                    <p>签<br>到</p>
+                </a>
+                <a href="#" title="下载APP">
+                    <span class="iconfont icon-mobile-phone"></span>
+                    <p>下<br>载<br>APP</p>
+                </a>
+            </div>
+            <div class="action-totop">
+                <span class="iconfont icon-caret-up"></span>
+                <p>TOP</p>
+            </div>
+        </div>
+        <footer>
+            <!-- tag -->
+            <div class="tag">
+                <ul class="clearfix">
+                    <li>
+                        <img src="https://bnmpstyle.bookuu.com/www/images/zheng.png" alt="">
+                        <div class="fl">
+                            <p>全场正品</p>
+                            <p>出版社直采·博库正品</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://bnmpstyle.bookuu.com/www/images/sheng.png" alt="">
+                        <div class="fl">
+                            <p>全场满59包邮</p>
+                            <p>惊喜不断·让利多多</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://bnmpstyle.bookuu.com/www/images/huo.png" alt="">
+                        <div class="fl">
+                            <p>门店自取</p>
+                            <p>就近取货·方式灵活</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://bnmpstyle.bookuu.com/www/images/hao.png" alt="">
+                        <div class="fl">
+                            <p>售后无忧</p>
+                            <p>服务体验·更加精彩</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- links -->
+            <div class="links clearfix container">
+                <ul class="links-box fl clearfix">
+                    <li>
+                        <span>新手指南</span>
+                        <div><a target="_blank" href="#">新用户注册</a></div>
+                        <div><a target="_blank" href="#">购物流程</a></div>
+                        <div><a target="_blank" href="#">积分制度</a></div>
+                        <div><a target="_blank" href="#">注册开店</a></div>
+                        <div><a target="_blank" href="#">激励制度</a></div>
+                    </li>
+                    <li>
+                        <span>支付与配送</span>
+                        <div><a target="_blank" href="#">IC卡充值说明</a></div>
+                        <div><a target="_blank" href="#">验货与签收</a></div>
+                        <div><a target="_blank" href="#">配送范围</a></div>
+                        <div><a target="_blank" href="#">自行取货</a></div>
+                        <div><a target="_blank" href="#">支付方式</a></div>
+                    </li>
+                    <li>
+                        <span>售后服务</span>
+                        <div><a target="_blank" href="#">发票制度</a></div>
+                        <div><a target="_blank" href="#">退换货流程</a></div>
+                        <div><a target="_blank" href="#">7天无理由退换货</a></div>
+                    </li>
+                    <li>
+                        <span>个人中心</span>
+                        <div><a target="_blank" href="#">店铺设置</a></div>
+                        <div><a target="_blank" href="#">团队管理</a></div>
+                        <div><a target="_blank" href="#">收入管理</a></div>
+                        <div><a target="_blank" href="#">我的订单</a></div>
+                        <div><a target="_blank" href="#">我的优惠券</a></div>
+                        <div><a target="_blank" href="#">我的等级</a></div>
+                    </li>
+                    <li>
+                        <span>了解博库</span>
+                        <div><a target="_blank" href="#">关于博库</a></div>
+                        <div><a target="_blank" href="#">联系我们</a></div>
+                        <div><a target="_blank" href="#">博库网隐私政策</a></div>
+                        <div><a target="_blank" href="#">博库用户注册协议</a></div>
+                        <div><a target="_blank" href="#">博库网分销商注册协议</a></div>
+                    </li>
+                </ul>
+                <i></i>
+                <div class="code-box fr">
+                    <ul class="clearfix">
+                        <li class="fl">
+                            <p>手机博库</p>
+                            <img src="https://bnmpstyle.bookuu.com/www/images/app.jpg" alt="">
+                            <p>下载手机客户端</p>
+                        </li>
+                        <li class="fl">
+                            <p>关注微信</p>
+                            <img src="https://bnmpstyle.bookuu.com/www/images/wx.jpg" alt="">
+                            <p>关注官方微信</p>
+                        </li>
+                    </ul>
+                    <div>
+                        <p>服务热线&nbsp;0571-26306883</p>
+                        <p>服务时间&nbsp;9：00-21：00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="copyright"></div>
+        </footer>
 </body>
+
 </html>

@@ -106,11 +106,15 @@
 .mt-15 {
     margin-top: 15px;
 }
+
 .ml-10 {
     margin-left: 10px;
 }
 .mg-5 {
     margin: 5px;
+}
+.mb-5 {
+    margin-bottom: 5px;
 }
 .mb-10 {
     margin-bottom: 10px;
@@ -152,6 +156,9 @@
 .fs-14 {
     font-size: 14px;
 }
+.fs-15 {
+    font-size: 15px;
+}
 .fs-16 {
     font-size: 16px;
 }
@@ -160,6 +167,9 @@
 }
 .fs-20 {
     font-size: 20px;
+}
+.fs-22 {
+    font-size: 22px;
 }
 .fs-24 {
     font-size: 24px;
@@ -170,11 +180,20 @@
 .fs-40 {
     font-size: 40px;
 }
+.fs-60 {
+    font-size: 60px;
+}
 .ht-30 {
     height: 30px;
 }
 .ht-36 {
     height: 36px;
+}
+.ht-80 {
+    height: 80px;
+}
+.lh-20 {
+    line-height: 20px;
 }
 .lh-80 {
     line-height: 80px;
@@ -182,11 +201,23 @@
 .lh-100 {
     line-height: 100px;
 }
+.ht-60 {
+    height: 60px;
+}
+.ht-25 {
+    height: 25px;
+}
+.ht-100 {
+    height: 100px;
+}
 .ht-430 {
     height: 430px;
 }
 .ta-rt {
     text-align: right;
+}
+.ta-lf {
+    text-align: left;
 }
 .wd-90 {
     width: 90px;
@@ -196,6 +227,12 @@
 }
 .wd-130 {
     width: 130px;
+}
+.wd-200 {
+    width: 200px;
+}
+.wd-450 {
+    width: 450px;
 }
 .ht-35 {
     height: 35px;
@@ -269,6 +306,7 @@
 .cl-rd {
     color: #e4393c;
 }
+
 .cl-rd-l {
     color: #e4393c;
 }
@@ -347,11 +385,20 @@
 .pd-20 {
     padding: 20px;
 }
+.pd-0005 {
+    padding: 0 5px;
+}
 .pd-0010 {
     padding: 0 10px;
 }
+.pd-0030 {
+    padding: 0 30px;
+}
 .pd-0415 {
     padding: 4px 15px;
+}
+.pd-1050 {
+    padding: 10px 50px;
 }
 .pd-1500 {
     padding: 15px 0;
@@ -361,6 +408,12 @@
 }
 .pd-3040 {
     padding: 30px 40px;
+}
+.pd-2000 {
+    padding: 20px 0;
+}
+.pd-20000 {
+    padding: 200px 0;
 }
 .pl-10{
     padding-left:10px;
@@ -434,6 +487,18 @@
 .mt-5 {
     margin-top: 5px;
 }
+.mt-8 {
+    margin-top: 8px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.bc-rd-d {
+    background-color: #de1616;
+}
 .bc-bl {
     background-color: #2ab4e8;
 }
@@ -469,7 +534,34 @@
 .wd-100 {
     width: 100px;
 }
+.wd-160 {
+    width: 160px;
+}
 
 .bs-bb {
     box-sizing: border-box;
+}
+.bb-1-e {
+    border-bottom: 1px #eee solid;
+}
+.pb-5 {
+    padding-bottom: 5px;
+}
+.minh-215 {
+    min-height: 215px;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+.bd-1-bl-d {
+    border: 1px #38b8eb solid;
+}
+.fs-13 {
+    font-size: 13px;
+}
+.wd-110 {
+    width:70px;
+}
+.mr-15 {
+    margin-right: 15px;
 }

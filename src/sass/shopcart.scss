@@ -1,0 +1,106 @@
+@import '_var';
+@import '//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@import '../lib/bootstrap/css/bootstrap.css';
+@import '../lib/Font-Awesome-3.2.1/css/font-awesome.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css';
+@import '../css/base.css';
+@import 'header';
+@import 'search';
+@import 'footer';
+body{
+    color:#212121;
+}
+.logo{
+    padding-bottom:30px;
+}
+.section {
+    /* margin-top: -1px; */
+    min-height: 500px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    position: relative;
+    a{
+        text-decoration: none;
+    
+        outline: none;
+    }
+}
+.tablecart thead.thead-1 {
+    background-color: #f3f3f3;
+    border: 1px #e8e8e8 solid;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+.tablecart tbody {
+    line-height: 24px;
+}
+.tablecart tfoot {
+    background-color: #f3f3f3;
+    border: 1px #e8e8e8 solid;
+    height: 80px;
+    line-height: 80px;
+    font-size: 16px;
+    margin-top: 10px;
+    #tobuy{
+        text-decoration: none;
+        outline: none;
+        color:#fff;
+        padding:3px 0;
+    }
+}
+.typecart-2 {
+    border: 1px #e8e8e8 solid;
+    border-width: 1px 1px 0 1px;
+}
+.delete-box {
+    position: relative;
+}
+
+.count-box {
+    width: 114px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px #ddd solid;
+    .count-sub {
+        width: 28px;
+        height: 26px;
+        border-right: 1px #ddd solid;
+        text-align: center;
+        color: #696967;
+        font-size: 25px;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        line-height: 24px;
+    }
+    input {
+        width: 56px;
+        height: 26px;
+        font-size: 16px;
+        color: #212121;
+        text-align: center;
+        line-height: 26px;
+        border: none;
+    }
+    .count-add {
+        width: 28px;
+        height: 26px;
+        border-left: 1px #ddd solid;
+        text-align: center;
+        color: #696967;
+        font-size: 22px;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        line-height: 24px;
+    }
+}

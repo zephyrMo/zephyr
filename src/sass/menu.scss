@@ -1,0 +1,32 @@
+.menu .title:hover{
+    background: #fff;
+    > a:nth-child(2){
+        color:#000 !important;
+    }
+    >i{
+        color:#000 !important;
+    } 
+    ul {
+       position: absolute;
+       top: 0;
+       left: 200px;
+       z-index: 10;
+       width: 760px;
+       min-height: 380px;
+       padding: 10px 20px;
+       /* border: 2px #2db4ea solid; */
+       /* margin-top: -1px; */
+       box-shadow: 1px 1px 6px rgba(0, 0, 0, .4);
+       background-color: #fff;
+       display: block;
+       line-height: 20px;
+       li {
+           padding: 5px 0;
+           border-bottom: 1px #eee dashed;
+       }
+   }
+
+}
+.menu .title ul{
+    display: none;
+}
