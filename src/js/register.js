@@ -1,4 +1,3 @@
-
 function loadPage() {
     return new Promise(function (resolve) {
         require(['main'],function(){

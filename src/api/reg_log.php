@@ -26,6 +26,8 @@
         if($res){   //注册成功 输出1
           $code = 1;
           $message = '注册成功';
+          $sql_2='CREATE TABLE `'.$uname.'@booku.com` (id varchar(255) ,Qty int ,price varchar(255) )';
+          $conn->query($sql_2);
         }else{
           $code = 0; //注册失败 输出0
           $message = '注册失败';
@@ -35,5 +37,23 @@
             'message' => $message
         );
         echo json_encode($datalist,JSON_UNESCAPED_UNICODE);
+    }
+    if($port == 'login'){
+        $sql = "SELECT * FROM reg_log WHERE uname = '$uname' AND upsd = '$upsd'";
+        $res = $conn->query($sql);
+        if($res->num_rows){
+            $code = 1;
+            $message = '登录成功';
+        }else{
+            $code = 0;
+            $message = '登录失败';
+        }
+        $datalist = array(
+            'uname' => $uname, //返回用户名  
+            'code' => $code,
+            'message' => $message
+        );
+        echo json_encode($datalist,JSON_UNESCAPED_UNICODE);
+        $res->close();
     }
 ?>

@@ -1,7 +1,6 @@
 require(['main'], function () {
     require(['jQuery', 'bootstrap', 'carousel', 'swiper', 'countdown', 'topMenu'], function (a, b, c, Swiper) {
         $(function(){
-            console.log(location.search.split('=')[1])
             if(location.search.length>1){
                 $('#login').text("欢迎,"+location.search.split('=')[1])
                 $('#registet').parent().html('<span id="quit">退出登录</apn>')
@@ -184,8 +183,13 @@ require(['main'], function () {
                 $limitime = $('.swiper-container1 .swiper-wrapper')
                 .find('.swiper-slide').text('');
                 data.forEach((item,idx)=>{
+                    $limitime[idx].dataset.id = item.guid;
                     $limitime[idx].style.backgroundImage =  
                     `url(${item['图片地址'].replace(/\\/g,'')})`
+                    $limitime[idx].onclick = function(){
+                        console.log(1)
+                        window.location.href = `../html/detail.html?uname=${location.search.split('=')[1]}&data-id=${item.guid}`
+                    }
                 })
                 return data;
             })
@@ -202,10 +206,10 @@ require(['main'], function () {
                         return `<li data-id=${id}>
                                     <div class="imgBox">
                                         <div class="scale">
-                                            <a href="#" class="pic"></a>
+                                            <a href="html/detail.html?uname=${location.search.split('=')[1]}&data-id=${item.guid}" class="pic"></a>
                                         </div>
                                         <div class="contxt">
-                                            <a href="#">${title}</a>
+                                            <a href="html/detail.html?uname=${location.search.split('=')[1]}&data-id=${item.guid}">${title}</a>
                                             <p>
                                                 <span class="fs-16 cl-rd-l ">¥${discount}</span>
                                                 <span class="cl-9">|</span>
@@ -225,10 +229,10 @@ require(['main'], function () {
                         return `<li data-id=${id}>
                                     <div class="imgBox">
                                         <div class="scale">
-                                            <a href="#" class="pic"></a>
+                                            <a href="html/detail.html?uname=${location.search.split('=')[1]}&data-id=${item.guid}" class="pic"></a>
                                         </div>
                                         <div class="contxt">
-                                            <a href="#">${title}</a>
+                                            <a href="html/detail.html?uname=${location.search.split('=')[1]}&data-id=${item.guid}">${title}</a>
                                             <p>
                                                 <span class="fs-16 cl-rd-l ">¥${discount}</span>
                                                 <span class="cl-9">|</span>

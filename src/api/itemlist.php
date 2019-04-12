@@ -1,9 +1,13 @@
 <?php
     include 'connect.php';
+    $port = isset($_POST['port']) ? $_POST['port']:'';
     $hot = isset($_GET['热度']) ? $_GET['热度'] : Null;
     $catagory = isset($_POST['类别']) ? $_POST['类别'] : Null;
     $press = isset($_POST['出版社']) ? $_POST['出版社'] : Null;
     $author = isset($_POST['作者']) ? $_POST['作者'] : Null;
+    $uname = isset($_POST['phone']) ? $_POST['phone'] : '';
+    $upsd = isset($_POST['psd']) ? $_POST['psd'] : '';
+    $guid = isset($_POST['guid']) ? $_POST['guid'] : '';
     if($hot){
         $sql = 'select * from bookuu where `热度`>'.$hot.' limit 12';
         //获取查询结果集
@@ -68,5 +72,52 @@
         // 关闭数据库，避免资源浪费
         $conn->close();
     };
+    $guid = isset($_POST['guid']) ? $_POST['guid']:'';
+    if($port == 'findid'){
+        $sql = "SELECT * FROM bookuu WHERE guid = '$guid'";
+        $res = $conn->query($sql);
+        $row = $res->fetch_all(MYSQLI_ASSOC);//得到数组
 
+        echo json_encode($row,JSON_UNESCAPED_UNICODE);
+        $res->close();
+    }
+    $goodnumber = isset($_POST['goodnumber']) ? $_POST['goodnumber']:'';
+    $size = isset($_POST['size']) ? $_POST['size']:'';
+    if($port == 'addCart'){
+        $sql3 = "SELECT * FROM `bookuu` WHERE guid = '$guid'";
+        $res3 = $conn->query($sql3);
+        $row3 = $res3->fetch_all(MYSQLI_ASSOC);//得到数组
+        // var_dump($row3[0]['id']); 获得商品id
+        $price = $row3[0]['现价'];
+
+        $sql = "SELECT * FROM `$uname@booku.com` WHERE id = '$guid'";
+        $res = $conn->query($sql);
+        if($res->num_rows){ //已有该商品
+            $row = $res->fetch_all(MYSQLI_ASSOC); //获得数组
+            $number = $row[0]['Qty'];
+            $num = $number * 1 + $goodnumber * 1;
+            $sql4 = "UPDATE `$uname@booku.com` SET Qty = '$num' WHERE id = '$guid'";
+            $res4 = $conn->query($sql4);
+
+        }else{ //购物车无该商品
+            $sql2 = "INSERT INTO `$uname@booku.com` (id,Qty,price) VALUES ('$guid','1','$price')";
+            $res2 = $conn->query($sql2);
+        }
+        $sql5 = "SELECT SUM(Qty) FROM `$uname@booku.com`"; //获取总的数量
+        $res5 = $conn->query($sql5); //总的数量
+        $row5 = $res5->fetch_all(MYSQLI_ASSOC);
+        $allnum = $row5[0];
+        //总价格
+        $sql6 = "SELECT SUM(price * Qty) FROM `$uname@booku.com`";//总价格
+        $res6 = $conn->query($sql6); 
+        $row6 = $res6->fetch_all(MYSQLI_ASSOC);
+        $allprice = $row6[0];
+
+        //商品的数据
+        $datalist = array(
+                'allnum' => $allnum,
+                'allprice' => $allprice
+            );
+        echo json_encode($datalist,JSON_UNESCAPED_UNICODE);
+    }
 ?>
