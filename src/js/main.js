@@ -10,7 +10,9 @@ requirejs.config({
         'register' : 'register',
         'login' : 'login',
         'countdown' : '/lib/jcountdown/jquery.jcountdown.min',
-        'topMeunu' : 'topMenu'
+        'topMeunu' : 'topMenu',
+        'getCode' : '/lib/get_code/jquery.code'
+
     },
     shim : {
         //配置依赖
@@ -33,6 +35,9 @@ requirejs.config({
             deps : ['jQuery']
         },
         'topMenu' : {
+            deps : ['jQuery']
+        },
+        'getCode' : {
             deps : ['jQuery']
         }
     }

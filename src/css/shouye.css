@@ -1642,8 +1642,6 @@ footer .links .code-box div:last-child p:first-child {
 
 .menu .title:hover ul {
   position: absolute;
-  top: 0;
-  left: 200px;
   z-index: 10;
   width: 760px;
   min-height: 380px;
@@ -1989,7 +1987,7 @@ footer .links .code-box div:last-child p:first-child {
   margin-right: -600px;
   top: 40px;
   background-color: #fff;
-  z-index: 10000;
+  z-index: 100;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 

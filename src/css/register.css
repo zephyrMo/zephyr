@@ -1509,6 +1509,11 @@ input {
   box-sizing: content-box;
 }
 
+.icon-check-empty {
+  font-size: 16px;
+  margin-right: -10px;
+}
+
 .content {
   font-size: 14px;
 }
@@ -1598,4 +1603,8 @@ input {
 .icon-check {
   font-size: 16px;
   margin-right: -10px;
+}
+
+.reg-frame ul li:last-child {
+  display: inline-block;
 }

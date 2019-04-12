@@ -847,6 +847,7 @@
 }
 
 #search .logo {
+  transition: all 0.5s;
   padding: 30px 0 0 0;
 }
 
@@ -1004,10 +1005,11 @@ input::placeholder {
   width: 100%;
   top: 0;
   background-color: #fff;
-  z-index: 10000;
+  z-index: 20001;
   padding-top: 20px;
   height: 80px;
   border-bottom: 3px solid #2db4ea;
+  transition: all 0.5s;
 }
 
 #search .logo.active h1 {

@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="wd-720 mg-a mt-20">
-                <form class="reg-frame lh-2p5">
+                <form class="reg-frame lh-2p5" id="regForm">
                     <ul>
                         <li>
                             <!-- .reg-err 表单错误信息显示区域 除了找回密码发送验证 不用cl-rd 其余所有错误同意使用cl-rd -->
@@ -44,7 +44,7 @@
                         <li>
                             <div class="wd-90 ta-rt fl">手机号：</div>
                             <div class="fl pr">
-                                <input class="wd-266 ht-24 lh-24 pd-0406" type="text" name="user-tel" id="phone" value="">
+                                <input class="wd-266 ht-24 lh-24 pd-0406" type="text" name="userTel" id="phone" value="">
                                 <span class="cl-67"></span>
                             </div>
                             <div class="fl ml-10">
@@ -59,14 +59,14 @@
                                     <input class="wd-166 ht-24 lh-24 pd-0406" type="text" name="passport" id="authcode" value="" maxlength="4">
                                     <span class="cl-67"></span>
                                 </div>
-                                <img class="fl ml-10 check_img" src="https://www.bookuu.com/authcode.php" width="90" height="34" alt="图形验证码">
+                                <span class="fl ml-10 code"></span>
                             </div>
                             <div class="fl ml-10">
-                                <a class="cl-bl-l get_authcode" href="javascript:void(0);">看不清，换一张</a>
+                                <a class="cl-bl-l get_authcode" href="javascript:void(0);"></a>
                             </div>
                             <div class="cb"></div>
                         </li>
-                        <li class="mt-20">
+                        <!-- <li class="mt-20">
                             <div class="wd-90 ta-rt fl">验证码：</div>
                             <div class="fl">
                                 <div class="fl pr">
@@ -79,7 +79,7 @@
                                 <p>&nbsp;</p>
                             </div>
                             <div class="cb"></div>
-                        </li>
+                        </li> -->
                         <li class="mt-20">
                             <div class="wd-90 ta-rt fl">密 码：</div>
                             <div class="fl pr">
@@ -92,16 +92,28 @@
                             </div>
                             <div class="cb"></div>
                         </li>
+                        <li class="mt-20">
+                            <div class="wd-90 ta-rt fl">确 认 密 码：</div>
+                            <div class="fl pr">
+                                <input class="wd-266 ht-24 lh-24 pd-0406" type="password" name="user-confirm-password" id="confirm_password" value="" maxlength="20">
+                                <span class="cl-67"></span>
+                                <span class="cl-dc"></span>
+                            </div>
+                            <div class="fl ml-10 cl-9 hidden">
+                                <p>密码可使用字母加数字或符号的组合长度6-20个字符</p>
+                            </div>
+                            <div class="cb"></div>
+                        </li>
                         <li class="wd-370 ta-ct">
-                            <button class="reg-btn mt-35 lh-2p4" style="cursor:pointer" type="button">注册</button>
+                            <button class="reg-btn mt-35 lh-2p4" id="regBtn" style="cursor:pointer" type="button">注册</button>
                             <div class="wd-328 ma">
                                 <p class="ta-rt cl-bl-l" style="cursor:pointer">已有账号&nbsp;<a class="cl-bl-l" href="/login.php">前往登录</a></p>
                             </div>
                         </li>
                         <li>
                             <div class="ta-ct wd-300" style="margin-left: 50px;line-height: 20px;padding: 20px 0 200px 0;">
-                                <label class="pr">
-                                    <span class="iconfont icon-check cl-bl"></span>
+                                <label class="pr" id="checkLabel">
+                                    <span class="iconfont icon-check cl-bl" id="checkbox"></span>
                                     <input id="treaty-btn" class="pa op-0" name="treaty" type="checkbox" value="我已阅读并同意">我已阅读并同意
                                     <a class="cl-bl-l showProtocal protocal" data-type="one" href="javascript:;">《博库网用户注册协议》</a>
                                 </label>

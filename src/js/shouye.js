@@ -1,5 +1,15 @@
 require(['main'], function () {
     require(['jQuery', 'bootstrap', 'carousel', 'swiper', 'countdown', 'topMenu'], function (a, b, c, Swiper) {
+        $(function(){
+            console.log(location.search.split('=')[1])
+            if(location.search.length>1){
+                $('#login').text("欢迎,"+location.search.split('=')[1])
+                $('#registet').parent().html('<span id="quit">退出登录</apn>')
+                .on('click',function(){
+                    window.location.href = '../html/login.html'
+                })
+            }
+        })
         $(function () {
             var b = new Date;
             var b = -b.getTimezoneOffset() / 60;
@@ -71,79 +81,82 @@ require(['main'], function () {
         async function renderTitle() {
             await aJaxTitle()
             .then(function(data){
-                console.log(data)
+                //导航渲染
                 let $menu = $('.menu .title');
                 let $ul = $menu.find('ul');
                 let $title = $('.menu .title')
-                let arr1 = data[0].map(function(item,idx){
-                    return item['类别']
-                })
-                $menu.find('i').hover(function(){
-                    $menu.find('i').css({
+                //导航渲染
+                navRender()
+                //导航hover
+                $menu.hover(function(){
+                    $(this).find('.iconfont').eq(0).css({
                         backgroundPositionX: '-50px'
                     })
-                    $ul.css({
-                        position:'fixed',
-                        left:240,
-                        top:148
+                    $ul.offset({top:195,left:284})
+                },function(){
+                    $(this).find('.iconfont').eq(0).css({
+                        backgroundPositionX: '0px'
                     })
                 })
-                let items1 = new Set(arr1);
-                //去重后将set集合重新转成数组
-                arr1 = Array.from(items1);
-                $title.children('a').each(function(idx,item){
-                        item.innerText = arr1[idx]
-                })
-                
-                let res = []
-                res.push(data[1].map(function(item,idx){
-                    return item['出版社']
-                }))
-                let items2 = new Set(res);
-                //去重后将set集合重新转成数组
-                res = Array.from(items2);
-                res.push(data[2].map(function(item,idx){
-                    return item['作者']
-                }))
-                let items3 = new Set(res);
-                //去重后将set集合重新转成数组
-                res = Array.from(items3);
-                console.dir(res[0])
-                var str = '<div class="bb-1-e pb-5">';
-                var html1 = res[0].map(function(ele,index){
-                        str +=  `<a target="_blank" href="#" class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">${res[0][index]}</a>`
-                        if(index == ele.length-1){
-                            str+= `<div class="cb"></div></div>`
-                            return str;
+                function navRender(){
+                    let arr1 = data[0].map(function(item,idx){
+                        return item['类别']
+                    })
+                    let items1 = new Set(arr1);
+                    //去重后将set集合重新转成数组
+                    arr1 = Array.from(items1);
+                    $title.children('a').each(function(idx,item){
+                            item.innerText = arr1[idx]
+                    })
+                    
+                    let res = []
+                    res.push(data[1].map(function(item,idx){
+                        return item['出版社']
+                    }))
+                    let items2 = new Set(res);
+                    //去重后将set集合重新转成数组
+                    res = Array.from(items2);
+                    res.push(data[2].map(function(item,idx){
+                        return item['作者']
+                    }))
+                    let items3 = new Set(res);
+                    //去重后将set集合重新转成数组
+                    res = Array.from(items3);
+                    var str = '<div class="bb-1-e pb-5">';
+                    var html1 = res[0].map(function(ele,index){
+                            str +=  `<a target="_blank" href="#" class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">${res[0][index]}</a>`
+                            if(index == ele.length-1){
+                                str+= `<div class="cb"></div></div>`
+                                return str;
+                            }
+                        }).join('')
+                    $ul.html(html1);
+                    var str2 = `<div class="minh-215 mb-5">`;
+                    var str3 = `<li><div class="wd-110 fl ">
+                                    <a target="_blank" href="#" class="fl mr-15 fw-bd">${res[1][0]}</a>
+                                    <div class="cb"></div>
+                                </div>
+                                <div class="wd-650 cl-6 fl" style="width: 650px;">`
+                    var html2 = res[1].map(function(item,idx){
+                        item = item.replace(/\\/g,'');
+                        substr =  `<a target="_blank" href="#" class="fl mr-15">${item}</a>`
+                        str3 += substr
+                        // console.log(idx)
+                        if(idx == res[1].length-1){
+                            str3+= `<div class="cb"></div></div><div class="cb"></div></li>`
+                            for(var i=0;i<6;i++){
+                                str2+=str3
+                            }
+                            str2+=`</div>`
+                            return str2;
                         }
                     }).join('')
-                $ul.html(html1);
-                var str2 = `<div class="minh-215 mb-5">`;
-                var str3 = `<li><div class="wd-110 fl ">
-                                <a target="_blank" href="#" class="fl mr-15 fw-bd">${res[1][0]}</a>
-                                <div class="cb"></div>
-                            </div>
-                            <div class="wd-650 cl-6 fl" style="width: 650px;">`
-                var html2 = res[1].map(function(item,idx){
-                    item = item.replace(/\\/g,'');
-                    console.log(item.length)
-                    substr =  `<a target="_blank" href="#" class="fl mr-15">${item}</a>`
-                    str3 += substr
-                    // console.log(idx)
-                    if(idx == res[1].length-1){
-                        str3+= `<div class="cb"></div></div><div class="cb"></div></li>`
-                        for(var i=0;i<6;i++){
-                            str2+=str3
-                        }
-                        str2+=`</div>`
-                        return str2;
-                    }
-                }).join('')
-                // console.log(html2)
-                $ul.each(function(idx,item){
-                    console.log(item)
-                    item.innerHTML += html2;
-                })
+                    // console.log(html2)
+                    $ul.each(function(idx,item){
+                        item.innerHTML += html2;
+                    })
+                }
+
                 
                 return data;
             })
@@ -256,6 +269,24 @@ require(['main'], function () {
                 $boxHot = $('#anchor-box9 .tab-content ul')
                 rdBox(6,12)
                 return data;
+            })
+            .then(function(data){
+                $topBtn = $('.action-totop');
+                $topBtn.click(function(){
+                    $topBtn.timer = setInterval(function(){
+                          scrollBy(0,Math.floor((0-$(document).scrollTop())/100))
+                          if(window.scrollY <= 0){
+                              clearInterval($topBtn.timer)
+                          }
+                      },1)
+                }).hide()
+                $(document).scroll(function(){
+                    if($(document).scrollTop()>500){
+                        $topBtn.show(300)
+                    }else{
+                        $topBtn.hide(300)
+                    }
+                })
             })
         }
         render();
