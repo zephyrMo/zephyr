@@ -2,9 +2,9 @@ $borderColor:#eee;
 $mainColor:#2db4ea;
 #search{
     .logo{
-        transition: all 0.5s; 
         padding: 30px 0 0 0;
         h1{
+            // transition: all 0.5s; 
             float: left;
             cursor: pointer;
             background:url('../img/logo.png') 0 0 no-repeat;
@@ -61,7 +61,7 @@ $mainColor:#2db4ea;
     }
     .shop-cart{
         float: right;
-        width: 108px;
+        width: 140px;
         text-align: right;
         a{
             padding: 8px 10px 6px;
@@ -69,6 +69,8 @@ $mainColor:#2db4ea;
             border-radius: 4px;
             color: #212121;
             line-height: 32px;
+            display: inline-block;
+            width: 133px;
             text-decoration: none;
             i {
                 font-size: 20px;
@@ -80,6 +82,17 @@ $mainColor:#2db4ea;
             }
             &:hover{
                 background-color:#eee;
+            }
+            .itemNum{
+                text-align: center;
+                display: inline-block;
+                width: 22px;
+                line-height: 22px;
+                margin: 5px 4px;
+                border-radius: 50%;
+                background-color: #ff6200;
+                color: #fff;
+                float: right;
             }
         }
     }
@@ -143,14 +156,16 @@ input::placeholder{
     padding-top:20px;;
     height:80px;
     border-bottom:3px solid $mainColor;
-    transition: all 0.5s;
     h1{
+        transition: all 0.3s;
         margin-left:20px;
     }
     .tip{
         display:none;
     }
     .shop-cart{
+        transition: all 0.3s;
+
         margin-right:60px;
     }
 }

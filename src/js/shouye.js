@@ -1,18 +1,9 @@
 require(['main'], function () {
-    require(['jQuery', 'bootstrap', 'carousel', 'swiper', 'countdown', 'topMenu'], function (a, b, c, Swiper) {
-        $(function(){
-            if(location.search.length>1){
-                $('#login').text("欢迎,"+location.search.split('=')[1])
-                $('#registet').parent().html('<span id="quit">退出登录</apn>')
-                .on('click',function(){
-                    window.location.href = '../html/login.html'
-                })
-            }
-        })
+    require(['jQuery', 'bootstrap', 'carousel', 'swiper', 'countdown', 'topMenu','user'], function (a, b, c, Swiper) {
         $(function () {
             var b = new Date;
             var b = -b.getTimezoneOffset() / 60;
-            var i = '2019/04/12 21:00:00';
+            var i = '2019/04/12 22:40:00';
             var config = {
                 timeText: i, //倒计时时间
                 timeZone: b, //时区
@@ -67,7 +58,7 @@ require(['main'], function () {
                     data: {
                         类别: 'all',
                         出版社:'all',
-                        作者:'all'
+                        作者:'all',
                     },
                     success: function (responseTxt) {
                         var data = JSON.parse(responseTxt);
@@ -75,8 +66,7 @@ require(['main'], function () {
                     }
                 })
             })
-        }
-        
+        }        
         async function renderTitle() {
             await aJaxTitle()
             .then(function(data){
@@ -91,7 +81,7 @@ require(['main'], function () {
                     $(this).find('.iconfont').eq(0).css({
                         backgroundPositionX: '-50px'
                     })
-                    $ul.offset({top:195,left:284})
+                    $ul.offset({top:193,left:282})
                 },function(){
                     $(this).find('.iconfont').eq(0).css({
                         backgroundPositionX: '0px'
@@ -109,21 +99,23 @@ require(['main'], function () {
                     })
                     
                     let res = []
-                    res.push(data[1].map(function(item,idx){
+                    let items2 = new Set(data[1].map(function(item,idx){
                         return item['出版社']
-                    }))
-                    let items2 = new Set(res);
+                    }));
                     //去重后将set集合重新转成数组
-                    res = Array.from(items2);
-                    res.push(data[2].map(function(item,idx){
+                    res.push(Array.from(items2));
+                    let items3 = new Set(data[2].map(function(item,idx){
                         return item['作者']
-                    }))
-                    let items3 = new Set(res);
+                    }));
                     //去重后将set集合重新转成数组
-                    res = Array.from(items3);
+                    res.push(Array.from(items3));
+                    let items4 = new Set(data[0].map(function(item,idx){
+                        return item['子类别id']
+                    }));
+                    res.push(Array.from(items4));
                     var str = '<div class="bb-1-e pb-5">';
                     var html1 = res[0].map(function(ele,index){
-                            str +=  `<a target="_blank" href="#" class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">${res[0][index]}</a>`
+                            str +=  `<a target="_blank" href="html/goodslist.html?uname=${uname}&data-id=${res[2][index]}" class="bc-bl cl-f pd-0005 bd-1-bl-d mr-10 fl mb-5">${res[0][index]}</a>`
                             if(index == ele.length-1){
                                 str+= `<div class="cb"></div></div>`
                                 return str;
@@ -272,6 +264,7 @@ require(['main'], function () {
                 //影音频道
                 $boxHot = $('#anchor-box9 .tab-content ul')
                 rdBox(6,12)
+                $('.rightmenu a[title="购物车"]')[0].href = `../html/shopcart.html?uname=${location.search.split('=')[1]}`
                 return data;
             })
             .then(function(data){

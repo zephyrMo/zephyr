@@ -11,7 +11,8 @@ requirejs.config({
         'login' : 'login',
         'countdown' : '/lib/jcountdown/jquery.jcountdown.min',
         'topMeunu' : 'topMenu',
-        'getCode' : '/lib/get_code/jquery.code'
+        'getCode' : '/lib/get_code/jquery.code',
+        'user' : 'user'
 
     },
     shim : {
@@ -38,6 +39,9 @@ requirejs.config({
             deps : ['jQuery']
         },
         'getCode' : {
+            deps : ['jQuery']
+        },
+        'user' : {
             deps : ['jQuery']
         }
     }

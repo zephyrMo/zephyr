@@ -21,11 +21,16 @@ $mainColor:#2db4ea;
         vertical-align: middle;
     }
 }
-#login{
+#login a,#registet a{
     line-height: 12px;
     display: inline-block;
     padding-right:6px;
     border-right:2px solid $borderColor;
+    color:#212121;
+    text-decoration: none;
+    &:hover{
+        color:$mainColor;
+    }
 }
 .currentNav{
     li{

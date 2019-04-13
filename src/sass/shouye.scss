@@ -125,6 +125,8 @@ $mainColor:#2db4ea;
             border-radius: 4px;
             color: #212121;
             line-height: 32px;
+            display: inline-block;
+            width: 133px;
             text-decoration: none;
             i {
                 font-size: 20px;
@@ -136,6 +138,17 @@ $mainColor:#2db4ea;
             }
             &:hover{
                 background-color:#eee;
+            }
+            .itemNum{
+                text-align: center;
+                display: inline-block;
+                width: 22px;
+                line-height: 22px;
+                margin: 5px 4px;
+                border-radius: 50%;
+                background-color: #ff6200;
+                color: #fff;
+                float: right;
             }
         }
     }

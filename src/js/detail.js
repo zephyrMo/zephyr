@@ -4,12 +4,15 @@ function loadPage() {
             require(['jQuery','bootstrap'],function($){
                 jQuery(function($){
                     $(document).ready(function(){
-                        $('header').load('../html/shouye.html #header_nav,#search',function(){
+                        $('header').load('../index.html #header_nav,#search',function(){
                 
                         }).prependTo('body');
                         $('footer').load('../html/shouye.html footer',function(){
-                            resolve()
+                                
                         }).appendTo('body')
+                        require(['user'],function(){
+                            resolve()
+                        })
                     })
                 })
             })
@@ -19,16 +22,10 @@ function loadPage() {
 async function reg() {
     await loadPage()
     .then(function(){
-        if(location.search.length>1){
-            var str = location.search.slice(1)
-            // console.log(str.split('&')[0].split('='))
-            $('#login').text("欢迎,"+str.split('&')[0].split('=')[1])
-            $('.toindex')[0].href = '../index.html?uname='+str.split('&')[0].split('=')[1]
-            $('#registet').parent().html('<span id="quit">退出登录</apn>')
-            .on('click',function(){
-                window.location.href = '../html/login.html'
-            })
-        }
+        $('.logo h1').click(function(){
+            location.href = '../index.html?uname='+str.split('&')[0].split('=')[1]
+        })
+        $('.toindex')[0].href = '../index.html?uname='+str.split('&')[0].split('=')[1]
         $.ajax({
             type: "post",
             url: "../api/itemlist.php",
@@ -38,6 +35,7 @@ async function reg() {
             },
             success: function (response) {
                 var res = JSON.parse(response)[0];
+                var url;
                 function render(){
                     var $bookname = $('#www_goods_name');
                     var $title = $('#www_goods_upper_title').find('p')
@@ -52,7 +50,7 @@ async function reg() {
                     $price.text(res['原价'])
                     $discount.text(res['现价'])
                     $itemImg = $('div.square-box.bgimg')
-                    var url = res['图片地址'].replace(/\\/g,'')
+                    url = res['图片地址'].replace(/\\/g,'')
                     $itemImg.css({
                         backgroundImage:`url(${url})`
                     })
@@ -75,21 +73,42 @@ async function reg() {
                         }
                     })
                     $addCart.click(function(){
-                        $.ajax({
-                            type: "post",
-                            url: "../api/itemlist.php",
-                            data: {
-                                port:'addCart',
-                                guid:str.split('&')[1].split('=')[1],
-                                goodnumber:$('.number-box')[0].value,
-                                phone:str.split('&')[0].split('=')[1],
-                            },
-                            success: function (response) {
-                                var res = JSON.parse(response)
-                                console.log(res)
+                        if(uname=='undefined'){
+                            if(confirm('请先登录,谢谢')){
+                                location.href = '../html/login.html'
                             }
-                        });
-                    })
+                        }else{
+                            $.ajax({
+                                type: "post",
+                                url: "../api/itemlist.php",
+                                data: {
+                                    port:'addCart',
+                                    guid:str.split('&')[1].split('=')[1],
+                                    goodnumber:$('.number-box')[0].value,
+                                    phone:str.split('&')[0].split('=')[1],
+                                    url:url,
+                                    
+    
+                                },
+                                success: function (response,suc) {
+                                    var res = JSON.parse(response)
+                                    console.log(res)
+                                    if(suc=='success'){
+                                        $('.fa-shopping-cart').clone().css({
+                                            position:'absolute'
+                                        }).prependTo('.joincart').animate({
+                                            top: -558,
+                                            left: 427,
+                                        },'slow',function(){
+                                            $(this).remove()
+                                            var qty = res.allnum['SUM(Qty)']
+                                            $('.itemNum').text(qty)
+                                        });
+                                    }
+                                }
+                            });
+                        }
+                    }).off("click")
                 }
                 cal()
             }

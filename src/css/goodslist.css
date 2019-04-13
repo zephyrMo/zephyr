@@ -745,6 +745,10 @@
   margin-right: 15px;
 }
 
+h1, .shop-cart {
+  transition: all 0.3s;
+}
+
 #header_nav {
   background: #f5f5f6;
   min-width: 1200px;
@@ -771,11 +775,17 @@
   vertical-align: middle;
 }
 
-#login {
+#login a, #registet a {
   line-height: 12px;
   display: inline-block;
   padding-right: 6px;
   border-right: 2px solid #eee;
+  color: #212121;
+  text-decoration: none;
+}
+
+#login a:hover, #registet a:hover {
+  color: #2db4ea;
 }
 
 .currentNav li {
@@ -847,7 +857,6 @@
 }
 
 #search .logo {
-  transition: all 0.5s;
   padding: 30px 0 0 0;
 }
 
@@ -917,7 +926,7 @@
 
 #search .shop-cart {
   float: right;
-  width: 108px;
+  width: 140px;
   text-align: right;
 }
 
@@ -927,6 +936,8 @@
   border-radius: 4px;
   color: #212121;
   line-height: 32px;
+  display: inline-block;
+  width: 133px;
   text-decoration: none;
 }
 
@@ -942,6 +953,18 @@
 
 #search .shop-cart a:hover {
   background-color: #eee;
+}
+
+#search .shop-cart a .itemNum {
+  text-align: center;
+  display: inline-block;
+  width: 22px;
+  line-height: 22px;
+  margin: 5px 4px;
+  border-radius: 50%;
+  background-color: #ff6200;
+  color: #fff;
+  float: right;
 }
 
 #search .nav-box .type {
@@ -1009,10 +1032,10 @@ input::placeholder {
   padding-top: 20px;
   height: 80px;
   border-bottom: 3px solid #2db4ea;
-  transition: all 0.5s;
 }
 
 #search .logo.active h1 {
+  transition: all 0.3s;
   margin-left: 20px;
 }
 
@@ -1021,6 +1044,7 @@ input::placeholder {
 }
 
 #search .logo.active .shop-cart {
+  transition: all 0.3s;
   margin-right: 60px;
 }
 

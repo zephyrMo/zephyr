@@ -744,6 +744,10 @@
   margin-right: 15px;
 }
 
+h1, .shop-cart {
+  transition: all 0.3s;
+}
+
 /**
  * Swiper 4.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1435,11 +1439,17 @@ button.swiper-pagination-bullet {
   vertical-align: middle;
 }
 
-#login {
+#login a, #registet a {
   line-height: 12px;
   display: inline-block;
   padding-right: 6px;
   border-right: 2px solid #eee;
+  color: #212121;
+  text-decoration: none;
+}
+
+#login a:hover, #registet a:hover {
+  color: #2db4ea;
 }
 
 .currentNav li {
@@ -1803,6 +1813,8 @@ footer .links .code-box div:last-child p:first-child {
   border-radius: 4px;
   color: #212121;
   line-height: 32px;
+  display: inline-block;
+  width: 133px;
   text-decoration: none;
 }
 
@@ -1818,6 +1830,18 @@ footer .links .code-box div:last-child p:first-child {
 
 #search .shop-cart a:hover {
   background-color: #eee;
+}
+
+#search .shop-cart a .itemNum {
+  text-align: center;
+  display: inline-block;
+  width: 22px;
+  line-height: 22px;
+  margin: 5px 4px;
+  border-radius: 50%;
+  background-color: #ff6200;
+  color: #fff;
+  float: right;
 }
 
 #search .nav-box .type {

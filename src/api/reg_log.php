@@ -26,7 +26,7 @@
         if($res){   //注册成功 输出1
           $code = 1;
           $message = '注册成功';
-          $sql_2='CREATE TABLE `'.$uname.'@booku.com` (id varchar(255) ,Qty int ,price varchar(255) )';
+          $sql_2='CREATE TABLE `'.$uname.'@booku.com` (id varchar(255) ,Qty int ,price varchar(255),title varchar(255),imgurl varchar(255) ,market varchar(255) )';
           $conn->query($sql_2);
         }else{
           $code = 0; //注册失败 输出0
