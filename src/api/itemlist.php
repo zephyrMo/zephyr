@@ -158,5 +158,147 @@
         $sql = "DELETE FROM `$uname@booku.com` WHERE id = '$guid'";
         $res = $conn->query($sql);
         $conn->close();
+    };
+    $page = isset($_POST['page']) ? $_POST['page']:'';
+    $qty = isset($_POST['qty']) ? $_POST['qty']:'';
+    $cid = isset($_POST['cid']) ? $_POST['cid']:'';
+    /*
+    由高到低 排序
+    */
+    if($port == 'sortDown'){
+        $idx = ($page-1) * $qty;
+        $sql = "SELECT * FROM  bookuu WHERE `子类别id` = '$cid'  order by `现价` DESC LIMIT $idx,$qty";
+        $res = $conn->query($sql);
+        $data = $res->fetch_all(MYSQLI_ASSOC);//得到数组
+
+        $sql2 = "SELECT * FROM bookuu  WHERE `子类别id` = '$cid' order by `现价` DESC";
+        $res2 = $conn->query($sql2);
+        $row = $res2->num_rows;
+        $goodlist = array(
+            'total' => $row,
+            'datalist' => $data,
+            'page' => $page,
+            'qty' => $qty
+        );
+        echo json_encode($goodlist,JSON_UNESCAPED_UNICODE);
+    };
+    /*
+    由低到高 排序
+     */
+    if($port == 'sortUp'){
+        $idx = ($page-1) * $qty;
+        $sql = "SELECT * FROM bookuu WHERE `子类别id` = '$cid' order by `现价` LIMIT $idx,$qty";
+        $res = $conn->query($sql);
+        $data = $res->fetch_all(MYSQLI_ASSOC);//得到数组
+
+        $sql2 = "SELECT * FROM bookuu order by `现价`";
+        $res2 = $conn->query($sql2);
+        $row = $res2->num_rows;
+        $goodlist = array(
+            'total' => $row,
+            'datalist' => $data,
+            'page' => $page,
+            'qty' => $qty
+        );
+        echo json_encode($goodlist,JSON_UNESCAPED_UNICODE);
+
+    };
+        /*
+    销量由高到低 排序
+    */
+    if($port == 'saleDown'){
+        $idx = ($page-1) * $qty;
+        $sql = "SELECT * FROM  bookuu WHERE `子类别id` = '$cid'  order by `热度` DESC LIMIT $idx,$qty";
+        $res = $conn->query($sql);
+        $data = $res->fetch_all(MYSQLI_ASSOC);//得到数组
+
+        $sql2 = "SELECT * FROM bookuu  WHERE `子类别id` = '$cid' order by `热度` DESC";
+        $res2 = $conn->query($sql2);
+        $row = $res2->num_rows;
+        $goodlist = array(
+            'total' => $row,
+            'datalist' => $data,
+            'page' => $page,
+            'qty' => $qty
+        );
+        echo json_encode($goodlist,JSON_UNESCAPED_UNICODE);
+    };
+    /*
+    销量由低到高 排序
+     */
+    if($port == 'saleUp'){
+        $idx = ($page-1) * $qty;
+        $sql = "SELECT * FROM bookuu WHERE `子类别id` = '$cid' order by `热度` LIMIT $idx,$qty";
+        $res = $conn->query($sql);
+        $data = $res->fetch_all(MYSQLI_ASSOC);//得到数组
+
+        $sql2 = "SELECT * FROM bookuu WHERE `子类别id` = '$cid' order by `热度`";
+        $res2 = $conn->query($sql2);
+        $row = $res2->num_rows;
+        $goodlist = array(
+            'total' => $row,
+            'datalist' => $data,
+            'page' => $page,
+            'qty' => $qty
+        );
+        echo json_encode($goodlist,JSON_UNESCAPED_UNICODE);
+
+    };
+            /*
+    时间由高到低 排序
+    */
+    if($port == 'newDown'){
+        $idx = ($page-1) * $qty;
+        $sql = "SELECT * FROM  bookuu WHERE `子类别id` = '$cid'  order by `出版时间` DESC LIMIT $idx,$qty";
+        $res = $conn->query($sql);
+        $data = $res->fetch_all(MYSQLI_ASSOC);//得到数组
+
+        $sql2 = "SELECT * FROM bookuu  WHERE `子类别id` = '$cid' order by `出版时间` DESC";
+        $res2 = $conn->query($sql2);
+        $row = $res2->num_rows;
+        $goodlist = array(
+            'total' => $row,
+            'datalist' => $data,
+            'page' => $page,
+            'qty' => $qty
+        );
+        echo json_encode($goodlist,JSON_UNESCAPED_UNICODE);
+    };
+    /*
+    时间由低到高 排序
+     */
+    if($port == 'newUp'){
+        $idx = ($page-1) * $qty;
+        $sql = "SELECT * FROM bookuu WHERE `子类别id` = '$cid' order by `出版时间` LIMIT $idx,$qty";
+        $res = $conn->query($sql);
+        $data = $res->fetch_all(MYSQLI_ASSOC);//得到数组
+
+        $sql2 = "SELECT * FROM bookuu WHERE `子类别id` = '$cid' order by `出版时间`";
+        $res2 = $conn->query($sql2);
+        $row = $res2->num_rows;
+        $goodlist = array(
+            'total' => $row,
+            'datalist' => $data,
+            'page' => $page,
+            'qty' => $qty
+        );
+        echo json_encode($goodlist,JSON_UNESCAPED_UNICODE);
+
+    };
+    $page = isset($_POST['currentPage']) ? $_POST['currentPage']:'';
+    //页码排序
+    if($port == 'pageCut'){
+        $sql = "SELECT * FROM bookuu WHERE `子类别id` = '$cid'";
+        $res = $conn->query($sql);
+        $content = $res->fetch_all(MYSQLI_ASSOC);//得到数组
+        $resArr = array_slice($content,($page-1)*$qty,$qty);
+        $data = array(
+                "resArr" => $resArr,
+                "len" => count($content),
+                "page" => $page * 1,
+                "qty" => $qty * 1 
+            );
+        echo json_encode($data,JSON_UNESCAPED_UNICODE);
     }
+    $conn -> close();
 ?>
